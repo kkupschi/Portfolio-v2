@@ -22,10 +22,15 @@
 
 .header__inner {
     height: 64px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 80px 1fr 120px;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
 }
 
 .brand {
@@ -90,6 +95,7 @@ main {
 .hero__photo {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .hero__photo img {
@@ -97,7 +103,8 @@ main {
     height: 260px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid rgba(139, 182, 214, .25);
+    object-position: center;
+    display: block;
 }
 
 .hero__text {
