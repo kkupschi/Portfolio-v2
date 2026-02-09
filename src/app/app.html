@@ -20,7 +20,7 @@
   <section class="hero" id="home">
     <div class="container hero__grid">
       <div class="hero__photo">
-        <img src="" alt="Kristian Kupsch"/>
+        <img src="assetsimagesprofile.jpg" alt="Kristian Kupsch" />
       </div>
 
       <div class="hero__text">
@@ -89,25 +89,54 @@
     </div>
   </section>
 
-  <section class="section" id="contact">
-    <div class="container">
-      <h2>Contact me</h2>
-      <form class="form">
-        <div class="form__row">
-          <input placeholder="Your name" />
-          <input placeholder="Your email" />
+<section class="section" id="contact">
+  <div class="container">
+    <h2>Contact me</h2>
+
+    <form class="form" (ngSubmit)="submit()">
+      <div class="form__row">
+        <div class="field">
+          <input [value]="name" (input)="name = ($any($event.target).value)" (blur)="markTouched('name')"
+            placeholder="Your name" autocomplete="name" />
+          <small class="error" [class.show]="showError('name')">
+            Please enter your name (min. 2 characters).
+          </small>
         </div>
-        <textarea rows="6" placeholder="Your message"></textarea>
 
-        <label class="check">
-          <input type="checkbox" />
-          I agree to the privacy policy.
-        </label>
+        <div class="field">
+          <input [value]="email" (input)="email = ($any($event.target).value)" (blur)="markTouched('email')"
+            placeholder="Your email" autocomplete="email" />
+          <small class="error" [class.show]="showError('email')">
+            Please enter a valid email address.
+          </small>
+        </div>
+      </div>
 
-        <button class="btn" type="button">Send</button>
-      </form>
-    </div>
-  </section>
+      <div class="field">
+        <textarea rows="6" [value]="message" (input)="message = ($any($event.target).value)"
+          (blur)="markTouched('message')" placeholder="Your message" autocomplete="off"></textarea>
+        <small class="error" [class.show]="showError('message')">
+          Please enter a message (min. 10 characters).
+        </small>
+      </div>
+
+      <label class="check">
+        <input type="checkbox" [checked]="privacy" (change)="privacy = ($any($event.target).checked)"
+          (blur)="markTouched('privacy')" />
+        I agree to the privacy policy.
+      </label>
+      <small class="error" [class.show]="showError('privacy')">
+        You must accept the privacy policy.
+      </small>
+
+      <button class="btn" type="submit" [disabled]="!formValid">
+        Send
+      </button>
+
+      <p class="success" *ngIf="sent">✅ Message sent!</p>
+    </form>
+  </div>
+</section>
 </main>
 
 <footer class="footer">
