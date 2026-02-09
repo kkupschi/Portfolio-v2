@@ -438,3 +438,46 @@ textarea {
     margin: 12px 0 14px;
     opacity: .9;
 }
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.overlay:target {
+    display: flex;
+}
+
+.overlay__content {
+    background: #1f2a33;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 760px;
+    width: calc(100% - 32px);
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 32px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    position: relative;
+}
+
+.overlay__close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 28px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    transition: 120ms ease;
+    cursor: pointer;
+}
+
+.overlay__close:hover {
+    color: #8bb6d6;
+}
