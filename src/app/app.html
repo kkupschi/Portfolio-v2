@@ -20,7 +20,7 @@
   <section class="hero" id="home">
     <div class="container hero__grid">
       <div class="hero__photo">
-        <img src="./assets/images/profile.jpg"/>
+        <img src="./assets/images/profile.jpg" alt="Kristian Kupsch"/>
       </div>
 
       <div class="hero__text">
@@ -50,202 +50,181 @@
     </div>
   </section>
 
-<section class="section" id="skills">
-  <div class="container">
-    <h2>My Skills</h2>
-    <div class="grid skills">
-      <div class="skill">
-        <img src="icons/angular.svg" alt="Angular"/>
+  <section class="section" id="skills">
+    <div class="container">
+      <h2>My Skills</h2>
+      <div class="grid skills">
+        <div class="skill">
+          <img src="icons/angular.svg" alt="Angular"/>
+        </div>
+
+        <div class="skill">
+          <img src="icons/typescript.svg" alt="TypeScript"/>
+        </div>
+
+        <div class="skill">
+          <img src="icons/javascript.svg" alt="JavaScript"/>
+        </div>
+
+        <div class="skill">
+          <img src="icons/html5.svg" alt="HTML"/>
+        </div>
+
+        <div class="skill">
+          <img src="icons/css.svg" alt="CSS"/>
+        </div>
+
+        <div class="skill">
+          <img src="icons/git.svg" alt="Git"/>
+        </div>
       </div>
 
-      <div class="skill">
-        <img src="icons/typescript.svg" alt="TypeScript"/>
-      </div>
+      <p class="learning">
+        <strong>Currently learning:</strong> Advanced Angular patterns and BackEnd
+      </p>
+    </div>
+  </section>
 
-      <div class="skill">
-        <img src="icons/javascript.svg" alt="JavaScript"/>
-      </div>
+  <section class="section" id="projects">
+    <div class="container">
+      <h2>My Projects</h2>
 
-      <div class="skill">
-        <img src="icons/html5.svg" alt="HTML"/>
-      </div>
+      <div class="projects">
+        <article class="project-card">
+          <div class="project-card__head">
+            <h3>Portfolio Website</h3>
+            <p class="project-card__sub">Duration: 1–2 weeks</p>
+          </div>
 
-      <div class="skill">
-        <img src="icons/css.svg" alt="CSS"/>
-      </div>
+          <p class="project-card__desc">
+            A responsive portfolio built with Angular and TypeScript. Includes smooth navigation, a
+            validated contact form (onBlur), and a clean dark UI.
+          </p>
 
-      <div class="skill">
-        <img src="icons/git.svg" alt="Git"/>
+          <ul class="tags">
+            <li>Angular</li>
+            <li>TypeScript</li>
+            <li>SCSS</li>
+            <li>Responsive</li>
+          </ul>
+
+          <div class="actions">
+            <a class="btn btn--ghost" href="https://github.com/DEIN_GITHUB/portfolio" target="_blank"
+              rel="noopener noreferrer">GitHub</a>
+            <a class="btn" href="https://DEIN-LIVE-LINK.de" target="_blank" rel="noopener noreferrer">Live Test</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__head">
+            <h3>JavaScript Web App</h3>
+            <p class="project-card__sub">Duration: 1 week</p>
+          </div>
+
+          <p class="project-card__desc">
+            A small web app focusing on DOM manipulation and clean UI interactions. Built with
+            vanilla JavaScript and structured code.
+          </p>
+
+          <ul class="tags">
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+
+          <div class="actions">
+            <a class="btn btn--ghost" href="https://github.com/DEIN_GITHUB/js-app" target="_blank"
+              rel="noopener noreferrer">GitHub</a>
+            <a class="btn" href="https://DEIN-LIVE-LINK.de" target="_blank" rel="noopener noreferrer">Live Test</a>
+          </div>
+        </article>
       </div>
     </div>
+  </section>
 
-    <p class="learning">
-      <strong>Currently learning:</strong> Advanced Angular patterns and BackEnd
-    </p>
-  </div>
-</section>
+  <section class="section" id="contact">
+    <div class="container">
+      <h2>Contact me</h2>
 
-<section class="section" id="projects">
-  <div class="container">
-    <h2>My Projects</h2>
+      <form class="form" (ngSubmit)="submit()">
+        <div class="form__row">
+          <div class="field">
+            <input [value]="name" (input)="name = ($any($event.target).value)" (blur)="markTouched('name')"
+              placeholder="Your name" autocomplete="name" />
+            <small class="error" [class.show]="showError('name')">
+              Please enter your name (min. 2 characters).
+            </small>
+          </div>
 
-    <div class="projects">
-      <article class="project-card">
-        <div class="project-card__head">
-          <h3>Portfolio Website</h3>
-          <p class="project-card__sub">Duration: 1–2 weeks</p>
+          <div class="field">
+            <input [value]="email" (input)="email = ($any($event.target).value)" (blur)="markTouched('email')"
+              placeholder="Your email" autocomplete="email" />
+            <small class="error" [class.show]="showError('email')">
+              Please enter a valid email address.
+            </small>
+          </div>
         </div>
 
-        <p class="project-card__desc">
-          A responsive portfolio built with Angular and TypeScript. Includes smooth navigation, a
-          validated contact form (onBlur), and a clean dark UI.
-        </p>
-
-        <ul class="tags">
-          <li>Angular</li>
-          <li>TypeScript</li>
-          <li>SCSS</li>
-          <li>Responsive</li>
-        </ul>
-
-        <div class="actions">
-          <a class="btn btn--ghost" href="https://github.com/DEIN_GITHUB/portfolio" target="_blank"
-            rel="noopener noreferrer">GitHub</a>
-          <a class="btn" href="https://DEIN-LIVE-LINK.de" target="_blank" rel="noopener noreferrer">Live Test</a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-card__head">
-          <h3>JavaScript Web App</h3>
-          <p class="project-card__sub">Duration: 1 week</p>
-        </div>
-
-        <p class="project-card__desc">
-          A small web app focusing on DOM manipulation and clean UI interactions. Built with
-          vanilla JavaScript and structured code.
-        </p>
-
-        <ul class="tags">
-          <li>JavaScript</li>
-          <li>HTML</li>
-          <li>CSS</li>
-        </ul>
-
-        <div class="actions">
-          <a class="btn btn--ghost" href="https://github.com/DEIN_GITHUB/js-app" target="_blank"
-            rel="noopener noreferrer">GitHub</a>
-          <a class="btn" href="https://DEIN-LIVE-LINK.de" target="_blank" rel="noopener noreferrer">Live Test</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <div class="container">
-    <h2>Contact me</h2>
-
-    <form class="form" (ngSubmit)="submit()">
-      <div class="form__row">
         <div class="field">
-          <input [value]="name" (input)="name = ($any($event.target).value)" (blur)="markTouched('name')"
-            placeholder="Your name" autocomplete="name" />
-          <small class="error" [class.show]="showError('name')">
-            Please enter your name (min. 2 characters).
+          <textarea rows="6" [value]="message" (input)="message = ($any($event.target).value)"
+            (blur)="markTouched('message')" placeholder="Your message" autocomplete="off"></textarea>
+          <small class="error" [class.show]="showError('message')">
+            Please enter a message (min. 10 characters).
           </small>
         </div>
 
-        <div class="field">
-          <input [value]="email" (input)="email = ($any($event.target).value)" (blur)="markTouched('email')"
-            placeholder="Your email" autocomplete="email" />
-          <small class="error" [class.show]="showError('email')">
-            Please enter a valid email address.
-          </small>
-        </div>
-      </div>
-
-      <div class="field">
-        <textarea rows="6" [value]="message" (input)="message = ($any($event.target).value)"
-          (blur)="markTouched('message')" placeholder="Your message" autocomplete="off"></textarea>
-        <small class="error" [class.show]="showError('message')">
-          Please enter a message (min. 10 characters).
+        <label class="check">
+          <input type="checkbox" [checked]="privacy" (change)="privacy = ($any($event.target).checked)"
+            (blur)="markTouched('privacy')" />
+          I agree to the privacy policy.
+        </label>
+        <small class="error" [class.show]="showError('privacy')">
+          You must accept the privacy policy.
         </small>
-      </div>
 
-      <label class="check">
-        <input type="checkbox" [checked]="privacy" (change)="privacy = ($any($event.target).checked)"
-          (blur)="markTouched('privacy')" />
-        I agree to the privacy policy.
-      </label>
-      <small class="error" [class.show]="showError('privacy')">
-        You must accept the privacy policy.
-      </small>
+        <button class="btn" type="submit" [disabled]="!formValid">
+          Send
+        </button>
 
-      <button class="btn" type="submit" [disabled]="!formValid">
-        Send
-      </button>
-
-      <p class="success" *ngIf="sent">✅ Message sent!</p>
-    </form>
-  </div>
-</section>
-
-<section class="section" id="impressum">
-  <div class="container">
-    <h2>Impressum</h2>
-    <p><strong>Kristian Kupsch</strong></p>
-    <p>Adresse: Hans-Sachs-Straße 135</p>
-    <p>E-Mail: kkupsch@hotmail.de</p>
-  </div>
-</section>
-
-<section class="section" id="datenschutz">
-  <div class="container">
-    <h2>Datenschutz</h2>
-    <p>
-      Diese Website dient als Portfolio-Projekt. Es werden keine personenbezogenen Daten gespeichert.
-      Wenn du mir per Kontaktformular schreibst, werden die eingegebenen Daten nur zur Bearbeitung der Anfrage
-      verwendet.
-    </p>
-  </div>
-</section>
+        <p class="success" *ngIf="sent">✅ Message sent!</p>
+      </form>
+    </div>
+  </section>
 </main>
 
 <footer class="footer">
   <div class="container footer__inner">
     <div>© Kristian Kupsch 2026</div>
     <div class="footer__links">
-    <a href="impressum">Impressum</a>
-    <a href="datenschutz">Datenschutz</a>
+    <a href="#impressum-modal">Impressum</a>
+    <a href="#datenschutz-modal">Datenschutz</a>
     </div>
   </div>
 </footer>
 
 <!-- Impressum Overlay -->
-<section id="impressum" class="overlay">
+<div id="impressum-modal" class="overlay">
   <div class="overlay__content">
-    <a href="#" class="overlay__close" aria-label="Close">×</a>
+    <a href="#close" class="overlay__close" aria-label="Close">×</a>
     <h2>Impressum</h2>
 
     <p><strong>Kristian Kupsch</strong></p>
-    <p>
-      Street + Number<br />
-      ZIP City<br />
-      Germany
-    </p>
-    <p>Email: your.email@example.com</p>
+    <p>Hans-Sachs-Straße 135</p>
+    <p>E-Mail: kkupsch@hotmail.de</p>
   </div>
-</section>
+</div>
 
-<section id="datenschutz" class="overlay">
+<div id="datenschutz-modal" class="overlay">
   <div class="overlay__content">
-    <a href="#" class="overlay__close" aria-label="Close">×</a>
-    <h2>Privacy Policy</h2>
+    <a href="#close" class="overlay__close" aria-label="Close">×</a>
+    <h2>Datenschutz</h2>
 
     <p>
-      This website is a portfolio project. No personal data is stored.
-      If you contact me via the form, the entered data is used only to process your request.
+      Diese Website dient als Portfolio-Projekt. Es werden keine personenbezogenen Daten gespeichert.
+      Wenn du mir per Kontaktformular schreibst, werden die eingegebenen Daten nur zur Bearbeitung der Anfrage
+      verwendet.
     </p>
   </div>
-</section>
+</div>
+
+<div id="close"></div>
