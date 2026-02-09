@@ -1,4 +1,121 @@
-<main style="padding: 40px;">
-  <h1>Kristian Kupsch</h1>
-  <p>Frontend Developer</p>
+<header class="header">
+  <div class="container header__inner">
+    <div class="brand">K.</div>
+
+    <nav class="nav">
+      <a href="#why">Why me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="lang">
+      <button type="button">DE</button>
+      <button type="button">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero__grid">
+      <div class="hero__photo">
+        <img src="assets/images/profile.jpg" alt="Kristian Kupsch" />
+      </div>
+
+      <div class="hero__text">
+        <h1>Kristian Kupsch</h1>
+        <p class="subtitle">FRONTEND DEVELOPER</p>
+        <a class="scroll" href="#why">↓</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why">
+    <div class="container">
+      <h2>Why me</h2>
+      <div class="why">
+        <div class="why__left">
+          <p><strong>I am located in Munich.</strong></p>
+        </div>
+        <div class="why__right">
+          <p>
+            I am motivated to continuously learn new technologies and develop myself.
+            My ability to solve complex problems and my passion for programming make
+            me a valuable member for your team.
+          </p>
+          <button class="btn" type="button">Let's talk</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="container">
+      <h2>My Skills</h2>
+      <div class="grid">
+        <div class="card">Angular</div>
+        <div class="card">TypeScript</div>
+        <div class="card">JavaScript</div>
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+        <div class="card">Git</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container">
+      <h2>My Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Project 1</h3>
+          <p>Short description of your project.</p>
+          <div class="actions">
+            <a class="btn btn--ghost" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Live Test</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Project 2</h3>
+          <p>Short description of your project.</p>
+          <div class="actions">
+            <a class="btn btn--ghost" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Live Test</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <h2>Contact me</h2>
+      <form class="form">
+        <div class="form__row">
+          <input placeholder="Your name" />
+          <input placeholder="Your email" />
+        </div>
+        <textarea rows="6" placeholder="Your message"></textarea>
+
+        <label class="check">
+          <input type="checkbox" />
+          I agree to the privacy policy.
+        </label>
+
+        <button class="btn" type="button">Send</button>
+      </form>
+    </div>
+  </section>
 </main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>© Kristian Kupsch 2026</div>
+    <div class="footer__links">
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+    </div>
+  </div>
+</footer>
