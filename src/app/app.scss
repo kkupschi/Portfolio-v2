@@ -401,3 +401,40 @@ textarea {
     opacity: 0.85;
     font-size: 14px;
 }
+
+.projects {
+    display: grid;
+    gap: 18px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .10);
+    border-radius: 18px;
+    padding: 20px;
+    transition: 120ms ease;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    border-color: #8bb6d6;
+}
+
+.project-card__head {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.project-card__sub {
+    opacity: .75;
+    font-size: 13px;
+    margin: 0;
+}
+
+.project-card__desc {
+    margin: 12px 0 14px;
+    opacity: .9;
+}
