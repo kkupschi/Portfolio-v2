@@ -121,48 +121,43 @@
       <h2>My Projects</h2>
 
       <div class="project-tabs">
-        <button type="button" class="tab" [class.active]="selectedProject === 'da-bubble'"
-          (click)="setProject('da-bubble')">
-          1. DA Bubble
+        <button type="button" class="tab" [class.active]="selectedProject === 'bookstore'" (click)="setProject('bookstore')">
+          1. Bookstore
         </button>
 
-        <button type="button" class="tab" [class.active]="selectedProject === 'sharkie'" (click)="setProject('sharkie')">
-          2. Sharkie
+        <button type="button" class="tab" [class.active]="selectedProject === 'pokedex'" (click)="setProject('pokedex')">
+          2. Pokedex
         </button>
 
         <button type="button" class="tab" [class.active]="selectedProject === 'join'" (click)="setProject('join')">
           3. Join
         </button>
-
-        <button type="button" class="tab" [class.active]="selectedProject === 'ongoing'" (click)="setProject('ongoing')">
-          4. Ongoing Project
-        </button>
       </div>
 
       <div class="project-panel">
         <div class="project-panel__left">
-          <div *ngIf="selectedProject === 'da-bubble'">
+          <div *ngIf="selectedProject === 'bookstore'">
             <div class="project-meta">
-              <p><strong>About the project</strong> <span>Duration: 3 weeks</span></p>
+              <p><strong>About the project</strong> <span>Duration: 1-2 weeks</span></p>
             </div>
 
             <ul class="project-list">
               <li>
                 <strong>About the project</strong>
                 <p>
-                  A Slack-like chat app with channels, real-time messaging and a clean UI.
+                  A responsive bookstore web app with clean UI and interactive features.
                 </p>
               </li>
               <li>
-                <strong>How I have organised my work process</strong>
+                <strong>How I organised my work process</strong>
                 <p>
-                  Planned tasks in small steps, tracked progress, and committed frequently with clear messages.
+                  Planned features step by step, tested regularly, and committed changes with clear messages.
                 </p>
               </li>
               <li>
                 <strong>My group work experience</strong>
                 <p>
-                  Worked in a team, aligned tasks, and integrated features while keeping the codebase consistent.
+                  Structured tasks clearly and kept the code readable and maintainable.
                 </p>
               </li>
             </ul>
@@ -170,59 +165,58 @@
             <div class="project-tech">
               <span>Technologies</span>
               <div class="tags">
-                <span class="tag">Angular</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">SCSS</span>
-                <span class="tag">Firebase</span>
-              </div>
-            </div>
-
-            <div class="actions">
-              <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Live Test</a>
-              <a class="btn btn--ghost" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </div>
-          </div>
-
-          <div *ngIf="selectedProject === 'sharkie'">
-            <div class="project-meta">
-              <p><strong>About the project</strong> <span>Duration: 1 week</span></p>
-            </div>
-
-            <ul class="project-list">
-              <li>
-                <strong>About the project</strong>
-                <p>
-                  A small game focusing on clean animations, keyboard controls and responsive layout.
-                </p>
-              </li>
-              <li>
-                <strong>How I have organised my work process</strong>
-                <p>
-                  Implemented features iteratively and tested regularly across different screen sizes.
-                </p>
-              </li>
-              <li>
-                <strong>My group work experience</strong>
-                <p>
-                  Solo project with structured milestones and clean code focus.
-                </p>
-              </li>
-            </ul>
-
-            <div class="project-tech">
-              <span>Technologies</span>
-              <div class="tags">
-                <span class="tag">JavaScript</span>
                 <span class="tag">HTML</span>
                 <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
               </div>
             </div>
 
             <div class="actions">
-              <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Live Test</a>
-              <a class="btn btn--ghost" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <button class="btn" type="button" disabled>Live Test</button>
+              <button class="btn btn--ghost" type="button" disabled>GitHub</button>
             </div>
           </div>
+
+            <div *ngIf="selectedProject === 'pokedex'">
+              <div class="project-meta">
+                <p><strong>About the project</strong> <span>Duration: 1 week</span></p>
+              </div>
+
+              <ul class="project-list">
+                <li>
+                  <strong>About the project</strong>
+                  <p>
+                    A Pokédex app consuming an API and displaying data with search and filters.
+                  </p>
+                </li>
+                <li>
+                  <strong>How I organised my work process</strong>
+                  <p>
+                    Built core features first, then improved UI/UX and performance.
+                  </p>
+                </li>
+                <li>
+                  <strong>My group work experience</strong>
+                  <p>
+                    Solo project with focus on clean structure and reusable functions.
+                  </p>
+                </li>
+              </ul>
+
+              <div class="project-tech">
+                <span>Technologies</span>
+                <div class="tags">
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">API</span>
+                  <span class="tag">CSS</span>
+                </div>
+              </div>
+
+              <div class="actions">
+                <button class="btn" type="button" disabled>Live Test</button>
+                <button class="btn btn--ghost" type="button" disabled>GitHub</button>
+              </div>
+            </div>
 
           <div *ngIf="selectedProject === 'join'">
             <div class="project-meta">
@@ -233,19 +227,19 @@
               <li>
                 <strong>About the project</strong>
                 <p>
-                  A Kanban-style task manager with drag & drop and clear task states.
+                  A Kanban-style task manager with clear task states and a structured UI.
                 </p>
               </li>
               <li>
-                <strong>How I have organised my work process</strong>
+                <strong>How I organised my work process</strong>
                 <p>
-                  Designed reusable UI parts and kept functions small and readable.
+                  Kept components small, used clear naming, and tested features across breakpoints.
                 </p>
               </li>
               <li>
                 <strong>My group work experience</strong>
                 <p>
-                  Coordinated tasks, resolved merge conflicts and ensured consistent UI.
+                  Coordinated tasks, integrated changes, and kept the UI consistent.
                 </p>
               </li>
             </ul>
@@ -260,8 +254,8 @@
             </div>
 
             <div class="actions">
-              <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Live Test</a>
-              <a class="btn btn--ghost" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <button class="btn" type="button" disabled>Live Test</button>
+              <button class="btn btn--ghost" type="button" disabled>GitHub</button>
             </div>
           </div>
 
