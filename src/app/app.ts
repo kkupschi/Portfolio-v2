@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 type Field = 'name' | 'email' | 'message' | 'privacy';
-type ProjectKey = 'da-bubble' | 'sharkie' | 'join' | 'ongoing';
+type ProjectKey = 'bookstore' | 'pokedex' | 'join';
 
 @Component({
   selector: 'app-root',
@@ -18,10 +18,20 @@ export class AppComponent {
   message = '';
   privacy = false;
   
-  selectedProject: ProjectKey = 'da-bubble';
+  selectedProject: ProjectKey = 'bookstore';
   
   setProject(key: ProjectKey): void {
     this.selectedProject = key;
+  }
+
+  getProjectPreviewSrc(): string {
+    const map: Record<ProjectKey, string> = {
+      bookstore: '/assets/projects/bookstore.png',
+      pokedex: '/assets/projects/pokedex.png',
+      join: '/assets/projects/join.png',
+    };
+
+    return map[this.selectedProject];
   }
 
   touched: Record<Field, boolean> = {
