@@ -227,79 +227,79 @@ textarea {
 }
 
 .footer {
-    background: #8bb6d6;
-    border-top: 1px solid rgba(0, 0, 0, .08);
-    color: rgba(11, 17, 22, .85);
-    padding: 22px 0;
+    background: var(--primary);
+    color: #0b1116;
+    padding: 28px 0;
 }
 
 .footer__inner {
     display: grid;
-    grid-template-columns: 1fr 80px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     gap: 16px;
 }
 
-.footer__left {
-    display: grid;
-    gap: 6px;
+.footer__title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    opacity: .9;
+}
+
+.footer__link {
+    color: #0b1116;
+    text-decoration: none;
+    opacity: .85;
+    transition: var(--t-fast);
+}
+
+.footer__link:hover {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.footer__center {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__copy {
+    font-size: 14px;
+    font-weight: 600;
+    opacity: .85;
 }
 
 .footer__right {
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
-}
-
-.footer__link {
-    color: rgba(11, 17, 22, .85);
-    text-decoration: none;
-    width: fit-content;
-}
-
-.footer__copy {
-    opacity: .75;
-    font-size: 12px;
-}
-
-.footer__brand {
-    width: 42px;
-    height: 42px;
-    border-radius: 12px;
-    display: grid;
-    place-items: center;
-    background: rgba(255, 255, 255, .35);
-    font-weight: 700;
-    justify-self: center;
-}
-
-.footer__title {
-    font-weight: 600;
+    gap: 14px;
 }
 
 .footer__icon {
-    color: rgba(11, 17, 22, .85);
-    text-decoration: none;
-    border: 1px solid rgba(11, 17, 22, .20);
     width: 34px;
     height: 34px;
     border-radius: 999px;
+    border: 1px solid rgba(11, 17, 22, .25);
     display: grid;
     place-items: center;
-    transition: 120ms ease;
+    transition: var(--t-fast);
+    background: rgba(255, 255, 255, .10);
 }
 
 .footer__icon:hover {
-    border-color: rgba(11, 17, 22, .4);
     transform: translateY(-1px);
+    background: rgba(255, 255, 255, .18);
 }
 
-.footer__links a {
-    color: rgba(11, 17, 22, .85);
-    text-decoration: none;
-    margin-left: 12px;
+.footer__icon img {
+    width: 28px;
+    height: 28px;
+    display: block;
+    opacity: .9;
 }
 
+/* responsive */
 @media (max-width: 700px) {
     .footer__inner {
         grid-template-columns: 1fr;
@@ -308,10 +308,6 @@ textarea {
 
     .footer__right {
         justify-content: center;
-    }
-
-    .footer__brand {
-        order: -1;
     }
 }
 
