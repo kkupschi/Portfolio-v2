@@ -192,7 +192,7 @@
             </div>
 
             <div class="actions">
-              <button class="btn" type="button" disabled>Live Test</button>
+              <button class="btn btn--primary" type="button" disabled>Live Test</button>
               <button class="btn btn--ghost" type="button" disabled>GitHub</button>
             </div>
           </div>
@@ -380,7 +380,7 @@
           <small class="error" [class.show]="showError('privacy')">
             You must accept the privacy policy.
           </small>
-          <button class="btn" type="submit" [disabled]="!formValid">Send</button>
+          <button class="btn btn--ghost" type="submit" [disabled]="!formValid">Send</button>
           <p class="success" *ngIf="sent">✅ Message sent!</p>
         </form>
       </div>
