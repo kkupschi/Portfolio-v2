@@ -337,8 +337,6 @@
     </div>
   </section>
 
-<a class="to-top" href="#home" aria-label="Back to top">↑</a>
-
   <section class="section" id="contact">
     <div class="container">
       <h2>Contact me</h2>
@@ -392,17 +390,26 @@
   </section>
 </main>
 
+<a class="to-top" href="#home" aria-label="Back to top">↑</a>
+
 <footer class="footer">
   <div class="container footer__inner">
-    <div>© Kristian Kupsch 2026</div>
-    <div class="footer__links">
-    <a href="#impressum-modal">Impressum</a>
-    <a href="#datenschutz-modal">Datenschutz</a>
+    <div class="footer__left">
+      <div class="footer__title">Legal notice</div>
+      <a class="footer__link" href="#impressum-modal">Impressum</a>
+      <div class="footer__copy">© Kristian Kupsch 2026</div>
+    </div>
+
+    <div class="footer__brand">K.</div>
+
+    <div class="footer__right">
+      <a class="footer__icon" href="#" aria-label="GitHub">⌁</a>
+      <a class="footer__icon" href="#" aria-label="Email">✉</a>
+      <a class="footer__icon" href="#" aria-label="LinkedIn">in</a>
     </div>
   </div>
 </footer>
 
-<!-- Impressum Overlay -->
 <div id="impressum-modal" class="overlay">
   <div class="overlay__content">
     <a href="#close" class="overlay__close" aria-label="Close">×</a>
@@ -411,6 +418,10 @@
     <p><strong>Kristian Kupsch</strong></p>
     <p>Hans-Sachs-Straße 135</p>
     <p>E-Mail: kkupsch@hotmail.de</p>
+
+    <p style="margin-top: 18px;">
+      <a href="#datenschutz-modal">Datenschutz</a>
+    </p>
   </div>
 </div>
 
