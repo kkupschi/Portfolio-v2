@@ -324,7 +324,6 @@
           <div class="ref__inner">
             <h3 class="ref__name">Sahra Mueller</h3>
             <p class="ref__project">Project Bookstore</p>
-
             <p class="ref__quote">
               “Kristian had to develop, format and deliver content in collaboration with the team members.
               He is reliable and friendly.”
@@ -375,53 +374,105 @@
 
   <section class="section" id="contact">
     <div class="container">
-      <h2>Contact me</h2>
-      <div class="contact-grid">
+      <h2 class="contact-title">Contact me</h2>
+
+      <div class="contact-top">
+        <p class="contact-text">
+          Encourage people to contact you and describe what role you are interested in.
+          Show that you will add value to their projects through your work.
+          Example: Feel free to get in touch with job offers or opportunities such as …
+        </p>
+
         <div class="contact-info">
-          <p class="contact-lead">
-            Still not sure if I am the right person for your project? Lorem ipsum dolor sit amet…
-          </p>
-          <div class="contact-details">
-            <p><strong>E-mail:</strong> kkupsch@hotmail.de</p>
-            <p><strong>Tel:</strong> +49 000 000000</p>
+          <div class="contact-line">
+            <img class="contact-ico" src="icons/mail.svg" alt="Email" />
+            <span>E-mail: kkupsch@hotmail.de</span>
+          </div>
+
+          <div class="contact-line">
+            <img class="contact-ico" src="icons/phone.svg" alt="Phone" />
+            <span>Tel: 0157 123 456 68</span>
           </div>
         </div>
-        <form class="form" (ngSubmit)="submit()">
-          <div class="form__row">
-            <div class="field">
+
+        <a class="to-top" href="#home" aria-label="Back to top">↑</a>
+      </div>
+
+      <form class="contact-form" (ngSubmit)="submit()">
+        <!-- Row: Name + Email -->
+        <div class="form-row">
+          <!-- NAME -->
+          <div class="field">
+            <label class="label">Your name</label>
+
+            <div class="input-wrap" [class.is-error]="showError('name')"
+              [class.is-ok]="touched.name && !showError('name') && name.length >= 2">
               <input [value]="name" (input)="name = ($any($event.target).value)" (blur)="markTouched('name')"
                 placeholder="Your name" autocomplete="name" />
-              <small class="error" [class.show]="showError('name')">
-                Please enter your name (min. 2 characters).
-              </small>
+              <span class="check" *ngIf="touched.name && !showError('name') && name.length >= 2">✓</span>
             </div>
-            <div class="field">
-              <input [value]="email" (input)="email = ($any($event.target).value)" (blur)="markTouched('email')"
-                placeholder="Your email" autocomplete="email" />
-              <small class="error" [class.show]="showError('email')">
-                Please enter a valid email address.
-              </small>
-            </div>
-          </div>
-          <div class="field">
-            <textarea rows="6" [value]="message" (input)="message = ($any($event.target).value)"
-              (blur)="markTouched('message')" placeholder="Your message" autocomplete="off"></textarea>
-            <small class="error" [class.show]="showError('message')">
-              Please enter a message (min. 10 characters).
+
+            <small class="error-msg" *ngIf="showError('name')">
+              Your name is required
             </small>
           </div>
-          <label class="check">
+
+          <!-- EMAIL -->
+          <div class="field">
+            <label class="label">Your Email</label>
+
+            <div class="input-wrap" [class.is-error]="showError('email')"
+              [class.is-ok]="touched.email && !showError('email')">
+              <input [value]="email" (input)="email = ($any($event.target).value)" (blur)="markTouched('email')"
+                placeholder="Your Email" autocomplete="email" />
+              <span class="check" *ngIf="touched.email && !showError('email')">✓</span>
+            </div>
+
+            <small class="error-msg" *ngIf="showError('email')">
+              Your Email is required
+            </small>
+          </div>
+        </div>
+
+        <!-- MESSAGE -->
+        <div class="field">
+          <label class="label">Your Message</label>
+
+          <div class="input-wrap input-wrap--area" [class.is-error]="showError('message')"
+            [class.is-ok]="touched.message && !showError('message') && message.length >= 10">
+            <textarea rows="8" [value]="message" (input)="message = ($any($event.target).value)"
+              (blur)="markTouched('message')" placeholder="Your Message" autocomplete="off"></textarea>
+            <span class="check" *ngIf="touched.message && !showError('message') && message.length >= 10">✓</span>
+          </div>
+
+          <small class="error-msg" *ngIf="showError('message')">
+            Your Message is required
+          </small>
+        </div>
+
+        <!-- PRIVACY + BUTTON -->
+        <div class="privacy-row">
+          <label class="privacy">
             <input type="checkbox" [checked]="privacy" (change)="privacy = ($any($event.target).checked)"
               (blur)="markTouched('privacy')" />
-            I agree to the privacy policy.
+            <span class="privacy-dot" [class.checked]="privacy"></span>
+
+            <span class="privacy-text">
+              I've read the <a href="#datenschutz">privacy policy</a> and agree to the processing of my data as outlined.
+            </span>
           </label>
-          <small class="error" [class.show]="showError('privacy')">
-            You must accept the privacy policy.
-          </small>
-          <button class="btn btn--ghost" type="submit" [disabled]="!formValid">Send</button>
-          <p class="success" *ngIf="sent">✅ Message sent!</p>
-        </form>
-      </div>
+
+          <button class="btn btn--ghost" type="submit" [disabled]="!formValid">
+            Send
+          </button>
+        </div>
+
+        <small class="error-msg" *ngIf="showError('privacy')">
+          Please accept the privacy policy.
+        </small>
+
+        <p class="success" *ngIf="sent">✅ Message sent!</p>
+      </form>
     </div>
   </section>
 </main>
