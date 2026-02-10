@@ -225,9 +225,9 @@ textarea {
 }
 
 .footer {
-    background: #1f2a33;
-    border-top: 1px solid rgba(255, 255, 255, .08);
-    color: rgba(255, 255, 255, .75);
+    background: #8bb6d6;
+    border-top: 1px solid rgba(0, 0, 0, .08);
+    color: rgba(11, 17, 22, .85);
 }
 
 .footer__inner {
@@ -239,7 +239,7 @@ textarea {
 }
 
 .footer__links a {
-    color: rgba(255, 255, 255, .75);
+    color: rgba(11, 17, 22, .85);
     text-decoration: none;
     margin-left: 12px;
 }
@@ -775,5 +775,51 @@ textarea {
 @media (min-width: 900px) {
     .testimonials {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.to-top {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .14);
+    color: rgba(255, 255, 255, .8);
+    transition: 120ms ease;
+    z-index: 900;
+}
+
+.to-top:hover {
+    border-color: #8bb6d6;
+    color: #8bb6d6;
+    transform: translateY(-2px);
+}
+
+.contact-grid {
+    display: grid;
+    gap: 28px;
+    align-items: start;
+}
+
+.contact-lead {
+    opacity: .85;
+    max-width: 520px;
+    line-height: 1.6;
+}
+
+.contact-details {
+    margin-top: 16px;
+    opacity: .85;
+}
+
+@media (min-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1.2fr;
     }
 }
