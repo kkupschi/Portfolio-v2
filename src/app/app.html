@@ -347,13 +347,11 @@
           <p class="contact-lead">
             Still not sure if I am the right person for your project? Lorem ipsum dolor sit amet…
           </p>
-      
           <div class="contact-details">
             <p><strong>E-mail:</strong> kkupsch@hotmail.de</p>
             <p><strong>Tel:</strong> +49 000 000000</p>
           </div>
         </div>
-      
         <form class="form" (ngSubmit)="submit()">
           <div class="form__row">
             <div class="field">
@@ -363,7 +361,6 @@
                 Please enter your name (min. 2 characters).
               </small>
             </div>
-      
             <div class="field">
               <input [value]="email" (input)="email = ($any($event.target).value)" (blur)="markTouched('email')"
                 placeholder="Your email" autocomplete="email" />
@@ -372,7 +369,6 @@
               </small>
             </div>
           </div>
-      
           <div class="field">
             <textarea rows="6" [value]="message" (input)="message = ($any($event.target).value)"
               (blur)="markTouched('message')" placeholder="Your message" autocomplete="off"></textarea>
@@ -380,7 +376,6 @@
               Please enter a message (min. 10 characters).
             </small>
           </div>
-      
           <label class="check">
             <input type="checkbox" [checked]="privacy" (change)="privacy = ($any($event.target).checked)"
               (blur)="markTouched('privacy')" />
@@ -389,7 +384,6 @@
           <small class="error" [class.show]="showError('privacy')">
             You must accept the privacy policy.
           </small>
-      
           <button class="btn" type="submit" [disabled]="!formValid">Send</button>
           <p class="success" *ngIf="sent">✅ Message sent!</p>
         </form>
