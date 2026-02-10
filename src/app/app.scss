@@ -619,3 +619,161 @@ textarea {
         display: none;
     }
 }
+
+.project-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.tab {
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .10);
+    color: rgba(255, 255, 255, .85);
+    padding: 10px 14px;
+    border-radius: 14px 14px 0 0;
+    cursor: pointer;
+    transition: 120ms ease;
+}
+
+.tab:hover {
+    border-color: rgba(139, 182, 214, .55);
+}
+
+.tab.active {
+    background: rgba(139, 182, 214, .18);
+    border-color: rgba(139, 182, 214, .75);
+    color: rgba(255, 255, 255, .95);
+}
+
+.project-panel {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: 1fr;
+    background: rgba(255, 255, 255, .03);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 18px;
+    padding: 18px;
+}
+
+.project-panel__left {
+    min-width: 0;
+}
+
+.project-meta p {
+    margin: 0 0 14px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    opacity: .9;
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.project-list li {
+    background: rgba(0, 0, 0, .10);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.project-list li p {
+    margin: 8px 0 0;
+    opacity: .85;
+}
+
+.project-tech {
+    margin-top: 14px;
+    display: grid;
+    gap: 8px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .12);
+}
+
+.project-preview {
+    height: 100%;
+}
+
+.project-preview__title {
+    margin: 0 0 10px;
+    opacity: .8;
+}
+
+.project-preview__box {
+    height: 260px;
+    border-radius: 18px;
+    border: 1px dashed rgba(255, 255, 255, .18);
+    background: rgba(0, 0, 0, .10);
+}
+
+@media (min-width: 900px) {
+    .project-panel {
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: start;
+    }
+
+    .project-preview__box {
+        height: 320px;
+    }
+}
+
+.testimonials {
+    display: grid;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.testimonial {
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 999px;
+    padding: 32px 28px;
+    text-align: center;
+}
+
+.testimonial h4 {
+    margin: 0 0 4px;
+}
+
+.testimonial .role {
+    font-size: 13px;
+    opacity: .7;
+    margin-bottom: 14px;
+}
+
+.testimonial .quote {
+    font-size: 14px;
+    opacity: .85;
+    margin-bottom: 16px;
+}
+
+.testimonial .link {
+    color: #8bb6d6;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+@media (min-width: 900px) {
+    .testimonials {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

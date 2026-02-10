@@ -107,62 +107,249 @@
     </div>
   </section>
 
-  <section class="section" id="projects">
-    <div class="container">
-      <h2>My Projects</h2>
+<section class="section" id="projects">
+  <div class="container">
+    <h2>My Projects</h2>
 
-      <div class="projects">
-        <article class="project-card">
-          <div class="project-card__head">
-            <h3>Portfolio Website</h3>
-            <p class="project-card__sub">Duration: 1–2 weeks</p>
+    <div class="project-tabs">
+      <button type="button" class="tab" [class.active]="selectedProject === 'da-bubble'"
+        (click)="setProject('da-bubble')">
+        1. DA Bubble
+      </button>
+
+      <button type="button" class="tab" [class.active]="selectedProject === 'sharkie'" (click)="setProject('sharkie')">
+        2. Sharkie
+      </button>
+
+      <button type="button" class="tab" [class.active]="selectedProject === 'join'" (click)="setProject('join')">
+        3. Join
+      </button>
+
+      <button type="button" class="tab" [class.active]="selectedProject === 'ongoing'" (click)="setProject('ongoing')">
+        4. Ongoing Project
+      </button>
+    </div>
+
+    <div class="project-panel">
+      <div class="project-panel__left">
+        <div *ngIf="selectedProject === 'da-bubble'">
+          <div class="project-meta">
+            <p><strong>About the project</strong> <span>Duration: 3 weeks</span></p>
           </div>
 
-          <p class="project-card__desc">
-            A responsive portfolio built with Angular and TypeScript. Includes smooth navigation, a
-            validated contact form (onBlur), and a clean dark UI.
-          </p>
-
-          <ul class="tags">
-            <li>Angular</li>
-            <li>TypeScript</li>
-            <li>SCSS</li>
-            <li>Responsive</li>
+          <ul class="project-list">
+            <li>
+              <strong>About the project</strong>
+              <p>
+                A Slack-like chat app with channels, real-time messaging and a clean UI.
+              </p>
+            </li>
+            <li>
+              <strong>How I have organised my work process</strong>
+              <p>
+                Planned tasks in small steps, tracked progress, and committed frequently with clear messages.
+              </p>
+            </li>
+            <li>
+              <strong>My group work experience</strong>
+              <p>
+                Worked in a team, aligned tasks, and integrated features while keeping the codebase consistent.
+              </p>
+            </li>
           </ul>
 
+          <div class="project-tech">
+            <span>Technologies</span>
+            <div class="tags">
+              <span class="tag">Angular</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">SCSS</span>
+              <span class="tag">Firebase</span>
+            </div>
+          </div>
+
           <div class="actions">
-            <a class="btn btn--ghost" href="https://github.com/DEIN_GITHUB/portfolio" target="_blank"
-              rel="noopener noreferrer">GitHub</a>
-            <a class="btn" href="https://DEIN-LIVE-LINK.de" target="_blank" rel="noopener noreferrer">Live Test</a>
+            <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Live Test</a>
+            <a class="btn btn--ghost" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
-        </article>
+        </div>
 
-        <article class="project-card">
-          <div class="project-card__head">
-            <h3>JavaScript Web App</h3>
-            <p class="project-card__sub">Duration: 1 week</p>
+        <div *ngIf="selectedProject === 'sharkie'">
+          <div class="project-meta">
+            <p><strong>About the project</strong> <span>Duration: 1 week</span></p>
           </div>
 
-          <p class="project-card__desc">
-            A small web app focusing on DOM manipulation and clean UI interactions. Built with
-            vanilla JavaScript and structured code.
-          </p>
-
-          <ul class="tags">
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
+          <ul class="project-list">
+            <li>
+              <strong>About the project</strong>
+              <p>
+                A small game focusing on clean animations, keyboard controls and responsive layout.
+              </p>
+            </li>
+            <li>
+              <strong>How I have organised my work process</strong>
+              <p>
+                Implemented features iteratively and tested regularly across different screen sizes.
+              </p>
+            </li>
+            <li>
+              <strong>My group work experience</strong>
+              <p>
+                Solo project with structured milestones and clean code focus.
+              </p>
+            </li>
           </ul>
 
-          <div class="actions">
-            <a class="btn btn--ghost" href="https://github.com/DEIN_GITHUB/js-app" target="_blank"
-              rel="noopener noreferrer">GitHub</a>
-            <a class="btn" href="https://DEIN-LIVE-LINK.de" target="_blank" rel="noopener noreferrer">Live Test</a>
+          <div class="project-tech">
+            <span>Technologies</span>
+            <div class="tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
           </div>
-        </article>
+
+          <div class="actions">
+            <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Live Test</a>
+            <a class="btn btn--ghost" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <div *ngIf="selectedProject === 'join'">
+          <div class="project-meta">
+            <p><strong>About the project</strong> <span>Duration: 2 weeks</span></p>
+          </div>
+
+          <ul class="project-list">
+            <li>
+              <strong>About the project</strong>
+              <p>
+                A Kanban-style task manager with drag & drop and clear task states.
+              </p>
+            </li>
+            <li>
+              <strong>How I have organised my work process</strong>
+              <p>
+                Designed reusable UI parts and kept functions small and readable.
+              </p>
+            </li>
+            <li>
+              <strong>My group work experience</strong>
+              <p>
+                Coordinated tasks, resolved merge conflicts and ensured consistent UI.
+              </p>
+            </li>
+          </ul>
+
+          <div class="project-tech">
+            <span>Technologies</span>
+            <div class="tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+
+          <div class="actions">
+            <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Live Test</a>
+            <a class="btn btn--ghost" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <div *ngIf="selectedProject === 'ongoing'">
+          <div class="project-meta">
+            <p><strong>About the project</strong> <span>Duration: ongoing</span></p>
+          </div>
+
+          <ul class="project-list">
+            <li>
+              <strong>About the project</strong>
+              <p>
+                An ongoing project where I continuously apply new Angular patterns and improve UI/UX.
+              </p>
+            </li>
+            <li>
+              <strong>How I have organised my work process</strong>
+              <p>
+                Weekly improvements, clear goals per session, and clean commits.
+              </p>
+            </li>
+            <li>
+              <strong>My group work experience</strong>
+              <p>
+                Currently solo, open for collaboration.
+              </p>
+            </li>
+          </ul>
+
+          <div class="project-tech">
+            <span>Technologies</span>
+            <div class="tags">
+              <span class="tag">Angular</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">SCSS</span>
+            </div>
+          </div>
+
+          <div class="actions">
+            <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Live Test</a>
+            <a class="btn btn--ghost" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-panel__right">
+        <div class="project-preview">
+          <p class="project-preview__title">Preview</p>
+          <div class="project-preview__box">
+            <!-- optional screenshot later -->
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<section class="section" id="testimonials">
+  <div class="container">
+    <h2>Need a teamplayer?</h2>
+    <p class="subtitle">
+      Here what my colleagues said about me
+    </p>
+
+    <div class="testimonials">
+      <div class="testimonial">
+        <h4>Sarah Mueller</h4>
+        <p class="role">Project: DA Bubble</p>
+        <p class="quote">
+          “Kristian is a dedicated developer, focused and reliable.
+          He communicates clearly and works very structured.”
+        </p>
+        <a href="#" class="link" aria-label="LinkedIn profile">LinkedIn Profile</a>
+      </div>
+
+      <div class="testimonial">
+        <h4>James Rugman</h4>
+        <p class="role">Project: Join</p>
+        <p class="quote">
+          “Working with Kristian was smooth. He writes clean code
+          and always keeps the team aligned.”
+        </p>
+        <a href="#" class="link">LinkedIn Profile</a>
+      </div>
+
+      <div class="testimonial">
+        <h4>Evelyn Marx</h4>
+        <p class="role">Project: Sharkie</p>
+        <p class="quote">
+          “He stays calm under pressure and delivers reliable results.
+          A strong team player.”
+        </p>
+        <a href="#" class="link">LinkedIn Profile</a>
+      </div>
+    </div>
+  </div>
+</section>
 
   <section class="section" id="contact">
     <div class="container">

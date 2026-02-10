@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 type Field = 'name' | 'email' | 'message' | 'privacy';
+type ProjectKey = 'da-bubble' | 'sharkie' | 'join' | 'ongoing';
 
 @Component({
   selector: 'app-root',
@@ -10,14 +11,19 @@ type Field = 'name' | 'email' | 'message' | 'privacy';
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
+
 export class AppComponent {
-  // Form values
   name = '';
   email = '';
   message = '';
   privacy = false;
+  
+  selectedProject: ProjectKey = 'da-bubble';
+  
+  setProject(key: ProjectKey): void {
+    this.selectedProject = key;
+  }
 
-  // Validation state (onBlur)
   touched: Record<Field, boolean> = {
     name: false,
     email: false,
@@ -25,12 +31,9 @@ export class AppComponent {
     privacy: false,
   };
 
-  // UI feedback
   sent = false;
 
-  // ---- validation helpers ----
   private isEmail(value: string): boolean {
-    // simple + robust enough for portfolio validation
     const v = value.trim();
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
   }
@@ -75,20 +78,17 @@ export class AppComponent {
   }
 
   submit(): void {
-    // mark everything touched so the user sees what's missing
     (Object.keys(this.touched) as Field[]).forEach((k) => (this.touched[k] = true));
 
     if (!this.formValid) return;
 
     this.sent = true;
 
-    // reset values
     this.name = '';
     this.email = '';
     this.message = '';
     this.privacy = false;
 
-    // reset touched (so errors don't show immediately)
     (Object.keys(this.touched) as Field[]).forEach((k) => (this.touched[k] = false));
   }
 }
