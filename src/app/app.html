@@ -138,10 +138,11 @@
 
   <section class="section" id="projects">
     <div class="container">
-      <h2>My Projects</h2>
+      <h2 class="section-title">My Projects</h2>
 
       <div class="project-tabs">
-        <button type="button" class="tab" [class.active]="selectedProject === 'bookstore'" (click)="setProject('bookstore')">
+        <button type="button" class="tab" [class.active]="selectedProject === 'bookstore'"
+          (click)="setProject('bookstore')">
           1. Bookstore
         </button>
 
@@ -154,137 +155,156 @@
         </button>
       </div>
 
-      <div class="project-panel">
-        <div class="project-panel__left">
-          <div *ngIf="selectedProject === 'bookstore'">
-            <div class="project-meta">
-              <p><strong>About the project</strong> <span>Duration: 1-2 weeks</span></p>
-            </div>
+      <div class="project-shell">
+        <div class="project-content">
 
-            <ul class="project-list">
-              <li>
-                <strong>About the project</strong>
-                <p>
-                  A responsive bookstore web app with clean UI and interactive features.
-                </p>
-              </li>
-              <li>
-                <strong>How I organised my work process</strong>
-                <p>
-                  Planned features step by step, tested regularly, and committed changes with clear messages.
-                </p>
-              </li>
-              <li>
-                <strong>My group work experience</strong>
-                <p>
-                  Structured tasks clearly and kept the code readable and maintainable.
-                </p>
-              </li>
-            </ul>
-
-            <div class="project-tech">
-              <span>Technologies</span>
-              <div class="project-tech__icons">
-                <img src="icons/html5.png" alt="HTML5"/>
-                <img src="icons/css.png" alt="CSS"/>
-                <img src="icons/javascript.png" alt="JavaScript"/>
-              </div>
-            </div>
-
-            <div class="actions">
-              <button class="btn btn--primary" type="button" disabled>Live Test</button>
-              <button class="btn btn--ghost" type="button" disabled>GitHub</button>
-            </div>
-          </div>
-
-            <div *ngIf="selectedProject === 'pokedex'">
-              <div class="project-meta">
-                <p><strong>About the project</strong> <span>Duration: 1 week</span></p>
-              </div>
-
-              <ul class="project-list">
-                <li>
-                  <strong>About the project</strong>
+          <!-- LEFT -->
+          <div class="project-left">
+            <!-- BOOKSTORE -->
+            <div *ngIf="selectedProject === 'bookstore'">
+              <div class="project-row">
+                <span class="dot"></span>
+                <div class="project-block">
+                  <div class="project-head">
+                    <h3>About the project</h3>
+                    <span class="duration">Duration: 1–2 weeks</span>
+                  </div>
                   <p>
-                    A Pokédex app consuming an API and displaying data with search and filters.
+                    A responsive bookstore web app with clean UI and interactive features.
                   </p>
-                </li>
-                <li>
-                  <strong>How I organised my work process</strong>
-                  <p>
-                    Built core features first, then improved UI/UX and performance.
-                  </p>
-                </li>
-                <li>
-                  <strong>My group work experience</strong>
-                  <p>
-                    Solo project with focus on clean structure and reusable functions.
-                  </p>
-                </li>
-              </ul>
-
-              <div class="project-tech">
-                <span>Technologies</span>
-                <div class="project-tech__icons">
-                  <img src="icons/html5.png" alt="HTML5"/>
-                  <img src="icons/css.png" alt="CSS"/>
-                  <img src="icons/javascript.png" alt="JavaScript"/>
-                  <img src="icons/api.png" alt="API"/>
                 </div>
               </div>
 
-              <div class="actions">
-                <button class="btn" type="button" disabled>Live Test</button>
+              <div class="project-row">
+                <span class="dot"></span>
+                <div class="project-block">
+                  <h3>How I have organised my work process</h3>
+                  <p>
+                    Planned features in small steps, tracked progress, and committed frequently with clear messages.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-row">
+                <span class="dot"></span>
+                <div class="project-block">
+                  <h3>My group work experience</h3>
+                  <p>
+                    Coordinated tasks, kept the codebase consistent, and focused on readable structure.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- POKEDEX -->
+            <div *ngIf="selectedProject === 'pokedex'">
+              <div class="project-row">
+                <span class="dot"></span>
+                <div class="project-block">
+                  <div class="project-head">
+                    <h3>About the project</h3>
+                    <span class="duration">Duration: 1 week</span>
+                  </div>
+                  <p>
+                    A Pokédex app consuming an API and displaying Pokémon with search and filters.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-row">
+                <span class="dot"></span>
+                <div class="project-block">
+                  <h3>How I have organised my work process</h3>
+                  <p>
+                    Built core features first, then improved UI/UX, error handling, and performance.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-row">
+                <span class="dot"></span>
+                <div class="project-block">
+                  <h3>My group work experience</h3>
+                  <p>
+                    Solo project with a focus on clean structure and reusable functions.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- JOIN -->
+            <div *ngIf="selectedProject === 'join'">
+              <div class="project-row">
+                <span class="dot"></span>
+                <div class="project-block">
+                  <div class="project-head">
+                    <h3>About the project</h3>
+                    <span class="duration">Duration: 2 weeks</span>
+                  </div>
+                  <p>
+                    A Kanban-style task manager with clear task states and a structured UI.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-row">
+                <span class="dot"></span>
+                <div class="project-block">
+                  <h3>How I have organised my work process</h3>
+                  <p>
+                    Kept components small, used clear naming, and tested features across breakpoints.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-row">
+                <span class="dot"></span>
+                <div class="project-block">
+                  <h3>My group work experience</h3>
+                  <p>
+                    Coordinated tasks, integrated changes, and kept UI and behavior consistent.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- TECH + BUTTONS -->
+            <div class="project-bottom">
+              <div class="project-techline">
+                <span class="tech-title">Technologies</span>
+
+                <div class="project-tech__icons" *ngIf="selectedProject === 'bookstore'">
+                  <img src="icons/html5.png" alt="HTML" />
+                  <img src="icons/css.png" alt="CSS" />
+                  <img src="icons/javascript.png" alt="JavaScript" />
+                </div>
+
+                <div class="project-tech__icons" *ngIf="selectedProject === 'pokedex'">
+                  <img src="icons/javascript.png" alt="JavaScript" />
+                  <img src="icons/api.png" alt="API" />
+                  <img src="icons/css.png" alt="CSS" />
+                </div>
+
+                <div class="project-tech__icons" *ngIf="selectedProject === 'join'">
+                  <img src="icons/javascript.png" alt="JavaScript" />
+                  <img src="icons/html5.png" alt="HTML" />
+                  <img src="icons/css.png" alt="CSS" />
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn--primary" type="button" disabled>Live Test</button>
                 <button class="btn btn--ghost" type="button" disabled>GitHub</button>
               </div>
             </div>
-
-          <div *ngIf="selectedProject === 'join'">
-            <div class="project-meta">
-              <p><strong>About the project</strong> <span>Duration: 2 weeks</span></p>
-            </div>
-
-            <ul class="project-list">
-              <li>
-                <strong>About the project</strong>
-                <p>
-                  A Kanban-style task manager with clear task states and a structured UI.
-                </p>
-              </li>
-              <li>
-                <strong>How I organised my work process</strong>
-                <p>
-                  Kept components small, used clear naming, and tested features across breakpoints.
-                </p>
-              </li>
-              <li>
-                <strong>My group work experience</strong>
-                <p>
-                  Coordinated tasks, integrated changes, and kept the UI consistent.
-                </p>
-              </li>
-            </ul>
-
-            <div class="project-tech">
-              <span>Technologies</span>
-                <div class="project-tech__icons">
-                  <img src="icons/html5.png" alt="HTML5"/>
-                  <img src="icons/css.png" alt="CSS"/>
-                  <img src="icons/javascript.png" alt="JavaScript"/>
-                  <img src="icons/api.png" alt="API"/>
-                </div>
-            </div>
-
-            <div class="actions">
-              <button class="btn" type="button" disabled>Live Test</button>
-              <button class="btn btn--ghost" type="button" disabled>GitHub</button>
-            </div>
           </div>
-        </div>
 
-        <div class="project-panel__right">
-          <div class="project-preview">
-            <p class="project-preview__title">Preview</p>
+          <!-- RIGHT -->
+          <div class="project-right">
+            <div class="preview-head">
+              <span>Preview</span>
+            </div>
+
             <div class="project-preview__box">
               <img class="project-preview__img" [src]="getProjectPreviewSrc()" alt="Project preview" />
             </div>

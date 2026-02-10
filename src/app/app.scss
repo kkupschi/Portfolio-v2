@@ -1048,3 +1048,138 @@ section {
 .why__right .btn {
     margin-top: 16px;
 }
+
+.section-title {
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+/* shell */
+.project-shell {
+    background: rgba(255, 255, 255, .03);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 22px;
+    padding: 22px;
+    margin-top: 18px;
+}
+
+.project-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 22px;
+    align-items: start;
+}
+
+.project-left {
+    display: grid;
+    gap: 18px;
+}
+
+.project-row {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 14px;
+    align-items: start;
+}
+
+.dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: var(--accent);
+    opacity: .9;
+    margin-top: 6px;
+}
+
+.project-block h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    letter-spacing: 0.3px;
+}
+
+.project-block p {
+    margin: 0;
+    opacity: .85;
+    line-height: 1.55;
+}
+
+.project-head {
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.duration {
+    opacity: .75;
+    font-size: 13px;
+}
+
+/* bottom line */
+.project-bottom {
+    display: grid;
+    gap: 14px;
+    margin-top: 6px;
+}
+
+.project-techline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.tech-title {
+    opacity: .85;
+}
+
+.project-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+/* right */
+.project-right {
+    display: grid;
+    gap: 10px;
+}
+
+.preview-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: .85;
+}
+
+.project-preview__box {
+    height: 320px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: rgba(0, 0, 0, .10);
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
+}
+
+.project-preview__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+    .project-content {
+        grid-template-columns: 1fr;
+    }
+
+    .project-actions {
+        justify-content: flex-start;
+    }
+
+    .project-preview__box {
+        height: 260px;
+    }
+}
