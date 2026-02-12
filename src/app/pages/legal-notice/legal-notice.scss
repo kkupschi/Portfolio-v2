@@ -1,0 +1,49 @@
+.legal {
+    background: #252d33;
+    color: #fff;
+    padding: 90px 0 120px;
+}
+
+.legal__inner {
+    width: min(1440px, 100%);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Main Title */
+.legal__title {
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-size: 54px;
+    color: rgba(137, 188, 217, 1);
+    margin: 0 0 40px 0;
+}
+
+/* Section title (Imprint) */
+.legal__section {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: rgba(137, 188, 217, 1);
+    margin: 0 0 16px 0;
+}
+
+/* Sub headings */
+.legal__sub {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    color: rgba(137, 188, 217, 1);
+    margin: 22px 0 10px 0;
+}
+
+/* Text */
+.legal__text {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    opacity: 0.92;
+    margin: 0;
+    max-width: 980px;
+}
