@@ -1,0 +1,85 @@
+.why {
+    background: #252d33;
+    color: #fff;
+    padding: 120px 0;
+}
+
+.why__inner {
+    width: min(1440px, 100%);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.why__headline {
+    text-align: center;
+    font-weight: 400;
+    font-size: 60px;
+    color: rgba(137, 188, 217, 1);
+    letter-spacing: 1px;
+    margin-bottom: 80px;
+}
+
+.why__content {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: start;
+    gap: 80px;
+}
+
+/* Left */
+.why__location {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    justify-content: center;
+}
+
+.why__location-icon {
+    width: 74px;
+    height: 64px;
+    object-fit: contain;
+    opacity: 0.95;
+}
+
+.why__location-text {
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.why__location-text span {
+    color: rgba(137, 188, 217, 1);
+}
+
+/* Right */
+.why__text h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 14px 0;
+}
+
+.why__text p {
+    max-width: 520px;
+    font-size: 18px;
+    line-height: 1.55;
+    opacity: 0.9;
+    margin: 0 0 30px 0;
+}
+
+.why__cta {
+    display: inline-block;
+    transition: 140ms ease;
+}
+
+.why__cta img {
+    width: 160px;
+    /* kannst du ans Figma angleichen */
+    height: auto;
+    display: block;
+}
+
+.why__cta:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+}

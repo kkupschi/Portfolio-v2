@@ -1,0 +1,118 @@
+.skills {
+    background: #252d33;
+    color: #fff;
+    padding: 120px 0 160px;
+}
+
+.skills__inner {
+    width: min(1440px, 100%);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.skills__headline {
+    margin-bottom: 80px;
+}
+
+.skills__content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: start;
+    gap: 80px;
+}
+
+/* LEFT GRID */
+.skills__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(90px, 1fr));
+    gap: 40px 10px;
+    align-items: start;
+}
+
+.skill {
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    text-align: center;
+    color: #89BCD9;
+}
+
+.skill img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    opacity: 0.95;
+}
+
+.skill span {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    opacity: 0.95;
+}
+
+/* RIGHT BUBBLE */
+.skills__bubble {
+    position: relative;
+    width: 391px;
+    max-width: 100%;
+    justify-self: end;
+}
+
+.skills__bubble-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.95;
+}
+
+.skills__bubble-content {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    padding: 70px 70px;
+    text-align: center;
+}
+
+.skills__bubble-title {
+    margin: 0 0 18px 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    opacity: 0.95;
+}
+
+.skills__bubble-learning {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.learning {
+    display: grid;
+    justify-items: center;
+    gap: 8px;
+}
+
+.learning img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    opacity: 0.95;
+}
+
+.learning span {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.skills__bubble-text {
+    margin: 0;
+    max-width: 360px;
+    line-height: 1.55;
+    opacity: 0.9;
+    font-size: 15px;
+}
