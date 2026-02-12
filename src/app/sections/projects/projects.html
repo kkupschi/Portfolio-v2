@@ -1,0 +1,253 @@
+<section class="projects" id="projects">
+    <div class="container projects__inner">
+        <h2 class="section-title projects__headline">My Projects</h2>
+
+        <!-- Tabs -->
+        <div class="projects__tabs" role="tablist" aria-label="Projects">
+            <button class="projects__tab" [class.is-active]="activeTab === 'bookstore'" (click)="select('bookstore')">
+                <span class="projects__tab-num">1.</span> Bookstore
+            </button>
+
+            <button class="projects__tab" [class.is-active]="activeTab === 'pokedex'" (click)="select('pokedex')">
+                <span class="projects__tab-num">2.</span> Pokedex
+            </button>
+
+            <button class="projects__tab" [class.is-active]="activeTab === 'join'" (click)="select('join')">
+                <span class="projects__tab-num">3.</span> Join
+            </button>
+
+            <button class="projects__tab" [class.is-active]="activeTab === 'ongoing'" (click)="select('ongoing')">
+                <span class="projects__tab-num">4.</span> Ongoing Project
+            </button>
+        </div>
+
+        <div class="projects__panel">
+            <div class="projects__content">
+
+                <!-- =========================
+                    PANEL 1: BOOKSTORE
+                ========================== -->
+                <ng-container *ngIf="activeTab === 'bookstore'">
+                    <div class="projects__left">
+                        <div class="projects__block">
+                            <div class="projects__dot"></div>
+                            <div class="projects__block-text">
+                                <div class="projects__block-head">
+                                    <h3>About the project</h3>
+                                    <span class="projects__duration">Duration: 3 weeks</span>
+                                </div>
+                                <p>
+                                    This App is a Slack Clone App.<br/>
+                                    It revolutionizes team communication and collaboration with its intuitive
+                                    interface, real-time messaging, and robust channel organization.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="projects__block">
+                            <div class="projects__dot"></div>
+                            <div class="projects__block-text">
+                                <h3>How I have organised my work process</h3>
+                                <p>
+                                    How do you keep your code clean and maintainable? Have you broken the
+                                    project down into reusable modules or components? Focus on documentation,
+                                    naming files, variables, classes and testing.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="projects__block">
+                            <div class="projects__dot"></div>
+                            <div class="projects__block-text">
+                                <h3>My group work experience</h3>
+                                <p>
+                                    How many people were in the team and what was your role? Describe your
+                                    tasks in 1-2 sentences, for example: login form, dashboard or chat functionality.
+                                    What technologies did you use? It is nice to mention good teamwork and cooperation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects__right">
+                        <div class="projects__tech">
+                            <p class="projects__tech-title">Technologies</p>
+                            <div class="projects__tech-icons">
+                                <img src="icons/html5.png" alt="HTML" />
+                                <img src="icons/css.png" alt="CSS" />
+                                <img src="icons/javascript.png" alt="JavaScript" />
+                            </div>
+                        </div>
+
+                        <div class="projects__image">
+                            <img src="/assets/project/bookstore.png" alt="Bookstore" />
+                        </div>
+
+                        <div class="projects__buttons">
+                            <a class="btn btn--filled" href="#" target="_blank" rel="noopener noreferrer">Live Test</a>
+                            <a class="btn btn--outline" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </ng-container>
+
+                    <!-- =========================
+                            PANEL 2: POKEDEX
+                    ========================== -->
+                <ng-container *ngIf="activeTab === 'pokedex'">
+                    <div class="projects__left">
+                        <!-- gleiche Struktur wie oben, Text später anpassen -->
+                        <div class="projects__block">
+                            <div class="projects__dot"></div>
+                            <div class="projects__block-text">
+                                <div class="projects__block-head">
+                                    <h3>About the project</h3>
+                                    <span class="projects__duration">Duration: 3 weeks</span>
+                                </div>
+                                <p>...</p>
+                            </div>
+                        </div>
+
+                        <div class="projects__block">
+                            <div class="projects__dot"></div>
+                            <div class="projects__block-text">
+                                <h3>How I have organised my work process</h3>
+                                <p>...</p>
+                            </div>
+                        </div>
+
+                        <div class="projects__block">
+                            <div class="projects__dot"></div>
+                            <div class="projects__block-text">
+                                <h3>My group work experience</h3>
+                                <p>...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects__right">
+                        <div class="projects__tech">
+                            <p class="projects__tech-title">Technologies</p>
+                            <div class="projects__tech-icons">
+                                <img src="icons/html5.png" alt="HTML"/>
+                                <img src="icons/css.png" alt="CSS"/>
+                                <img src="icons/javascript.png" alt="JavaScript"/>
+                                <img src="icons/api.png" alt="API" />
+                            </div>
+                        </div>
+
+                        <div class="projects__image">
+                            <img src="/assets/project/pokedex.png" alt="Pokedex" />
+                        </div>
+
+                        <div class="projects__buttons">
+                            <a class="btn btn--filled" href="#" target="_blank" rel="noopener noreferrer">Live Test</a>
+                            <a class="btn btn--outline" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </ng-container>
+
+                    <!-- =========================
+                            PANEL 3: JOIN
+                    ========================== -->
+                <ng-container *ngIf="activeTab === 'join'">
+                    <div class="projects__left">
+                        <div class="projects__block">
+                            <div class="projects__dot"></div>
+                            <div class="projects__block-text">
+                                <div class="projects__block-head">
+                                    <h3>About the project</h3><span class="projects__duration">Duration: 3 weeks</span>
+                                </div>
+                                <p>...</p>
+                            </div>
+                        </div>
+                        <div class="projects__block">
+                            <div class="projects__dot"></div>
+                            <div class="projects__block-text">
+                                <h3>How I have organised my work process</h3>
+                                <p>...</p>
+                            </div>
+                        </div>
+                        <div class="projects__block">
+                            <div class="projects__dot"></div>
+                            <div class="projects__block-text">
+                                <h3>My group work experience</h3>
+                                <p>...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects__right">
+                        <div class="projects__tech">
+                            <p class="projects__tech-title">Technologies</p>
+                            <div class="projects__tech-icons">
+                                <img src="icons/angular.png" alt="Angular"/>
+                                <img src="icons/css.png" alt="CSS"/>
+                            </div>
+                        </div>
+
+                        <div class="projects__image">
+                            <img src="/assets/project/join.png" alt="Join" />
+                        </div>
+
+                        <div class="projects__buttons">
+                            <a class="btn btn--filled" href="#" target="_blank" rel="noopener noreferrer">Live Test</a>
+                            <a class="btn btn--outline" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </ng-container>
+
+                    <!-- =========================
+                            PANEL 4: ONGOING
+                    ========================== -->
+                <ng-container *ngIf="activeTab === 'ongoing'">
+                    <div class="projects__left">
+                        <div class="projects__block">
+                            <div class="projects__dot"></div>
+                            <div class="projects__block-text">
+                                <div class="projects__block-head">
+                                    <h3>About the project</h3><span class="projects__duration">Duration: in
+                                        progress</span>
+                                </div>
+                                <p>...</p>
+                            </div>
+                        </div>
+                        <div class="projects__block">
+                            <div class="projects__dot"></div>
+                            <div class="projects__block-text">
+                                <h3>How I have organised my work process</h3>
+                                <p>...</p>
+                            </div>
+                        </div>
+                        <div class="projects__block">
+                            <div class="projects__dot"></div>
+                            <div class="projects__block-text">
+                                <h3>My group work experience</h3>
+                                <p>...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects__right">
+                        <div class="projects__tech">
+                            <p class="projects__tech-title">Technologies</p>
+                            <div class="projects__tech-icons">
+                                <img src="icons/angular.png" alt="Angular" />
+                                <img src="icons/typescript.png" alt="TypeScript" />
+                            </div>
+                        </div>
+
+                        <div class="projects__image">
+                            <img src="/assets/project/ongoing.png" alt="Ongoing Project" />
+                        </div>
+
+                        <div class="projects__buttons">
+                            <a class="btn btn--filled" href="#" target="_blank" rel="noopener noreferrer">Live Test</a>
+                            <a class="btn btn--outline" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </ng-container>
+
+            </div>
+        </div>
+    </div>
+</section>
