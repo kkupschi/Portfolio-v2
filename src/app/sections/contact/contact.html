@@ -1,0 +1,77 @@
+<section class="contact" id="contact">
+    <div class="container contact__inner">
+
+        <h2 class="section-title contact__headline">Contact me</h2>
+
+        <div class="contact__top">
+            <!-- Left text -->
+            <p class="contact__text">
+                Encourage people to contact you and describe what role you are interested in.
+                Show that you will add value to their projects through your work.<br /><br />
+                Example: Feel free to get in touch with job offers or opportunities such as: ...
+            </p>
+
+            <!-- Right info -->
+            <div class="contact__info">
+                <div class="contact__info-row">
+                    <img class="contact__info-icon" src="/icons/email.png" alt="" />
+                    <span>E-mail: kkupsch@hotmail.de</span>
+                </div>
+
+                <div class="contact__info-row">
+                    <img class="contact__info-icon" src="/icons/phone.png" alt="" />
+                    <span>Tel: 0173 / 408 72 52</span>
+                </div>
+            </div>
+
+            <!-- Scroll-to-top button -->
+            <a class="contact__to-top" href="#home" aria-label="Back to top">
+                <img src="/assets/ui/arrow-up.png" alt="Back to Top"/>
+            </a>
+        </div>
+
+        <form class="contact__form" (ngSubmit)="submit()" novalidate>
+
+            <div class="contact__row">
+                <label class="field">
+                    <span class="field__label">Your name</span>
+                    <input type="text" name="name" [(ngModel)]="name" />
+                </label>
+
+                <label class="field">
+                    <span class="field__label">Your Email</span>
+                    <input type="email" name="email" [(ngModel)]="email" />
+                </label>
+            </div>
+
+            <label class="field field--message">
+                <span class="field__label">Your Message</span>
+                <textarea name="message" rows="6" [(ngModel)]="message"></textarea>
+            </label>
+
+            <div class="contact__bottom">
+                <label class="privacy">
+                    <input type="checkbox" [(ngModel)]="privacyAccepted" name="privacyAccepted" (change)="clearError()" hidden />
+                
+                    <img class="privacy__icon" [src]="getCheckboxIcon()" (mouseenter)="hovering = true" (mouseleave)="hovering = false"
+                        alt="Checkbox" />
+                
+                    <span class="privacy__text">
+                        I've read the
+                        <a href="#" class="privacy__link">privacy policy</a>
+                        and agree to the processing of my data as outlined.
+                    </span>
+                </label>
+
+                <!-- Button: PNG optional -->
+                <button class="send" type="submit" [disabled]="!privacyAccepted">
+                    Send
+                    <!-- Wenn du PNG willst, ersetze den Text-Button durch das Image:
+                    <img src="/assets/ui/send.png" alt="Send" />
+                    -->
+                </button>
+            </div>
+        </form>
+
+    </div>
+</section>

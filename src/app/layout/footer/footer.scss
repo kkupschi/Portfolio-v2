@@ -1,0 +1,82 @@
+.footer {
+    background: #89bcd9;
+    height: 214px;
+    display: flex;
+    align-items: center;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.footer__inner {
+    width: min(1440px, 100%);
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+.footer__left {
+    display: grid;
+    gap: 10px;
+    justify-items: start;
+    color: #262e34;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.footer__legal {
+    color: #262e34;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: 140ms ease;
+}
+
+.footer__legal:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer__copy {
+    margin: 0;
+    opacity: 0.9;
+}
+
+.footer__center {
+    display: grid;
+    place-items: center;
+}
+
+.footer__logo {
+    width: 72px;
+    /* kannst du an Figma angleichen */
+    height: auto;
+    display: block;
+    opacity: 0.9;
+}
+
+.footer__right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer__right a {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    transition: 140ms ease;
+}
+
+.footer__right a:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.footer__right img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    opacity: 0.9;
+}
