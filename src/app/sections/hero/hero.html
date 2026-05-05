@@ -4,15 +4,15 @@
         <img class="navbar__logo" src="/assets/ui/logo-dark.png" alt="Logo" />
 
         <div class="navbar__links">
-            <a href="#why">Why me</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#why">{{ lang.t().nav.whyMe }}</a>
+            <a href="#skills">{{ lang.t().nav.skills }}</a>
+            <a href="#projects">{{ lang.t().nav.projects }}</a>
+            <a href="#contact">{{ lang.t().nav.contact }}</a>
         </div>
 
         <div class="navbar__lang">
-            <button type="button">DE</button>
-            <button type="button" class="active">EN</button>
+            <button type="button" [class.active]="lang.lang() === 'de'" (click)="lang.set('de')">DE</button>
+            <button type="button" [class.active]="lang.lang() === 'en'" (click)="lang.set('en')">EN</button>
         </div>
 
     </div>

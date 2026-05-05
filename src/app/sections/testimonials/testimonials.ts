@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-testimonials',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './testimonials.html',
-  styleUrls: ['./testimonials.scss']
+  styleUrls: ['./testimonials.scss'],
 })
-export class TestimonialsComponent {}
+export class TestimonialsComponent {
+  lang = inject(LanguageService);
+}

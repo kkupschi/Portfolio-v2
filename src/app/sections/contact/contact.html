@@ -1,16 +1,12 @@
 <section class="contact" id="contact">
     <div class="container contact__inner">
 
-        <h2 class="section-title contact__headline">Contact me</h2>
+        <h2 class="section-title contact__headline">{{ lang.t().contact.title }}</h2>
 
         <ng-container *ngIf="submitState === 'idle'">
 
             <div class="contact__top">
-                <p class="contact__text">
-                    Encourage people to contact you and describe what role you are interested in.
-                    Show that you will add value to their projects through your work.<br /><br />
-                    Example: Feel free to get in touch with job offers or opportunities such as: ...
-                </p>
+                <p class="contact__text">{{ lang.t().contact.text }}</p>
 
                 <div class="contact__info">
                     <div class="contact__info-row">
@@ -32,27 +28,27 @@
 
                 <div class="contact__row">
                     <div class="field">
-                        <label class="field__label" for="name">Your name</label>
+                        <label class="field__label" for="name">{{ lang.t().contact.nameLabel }}</label>
                         <input id="name" type="text" formControlName="name" autocomplete="name"
                             [class.field__input--error]="fieldError('name')" />
-                        <span class="field__error">{{ fieldError('name') ? 'Name is required.' : '' }}</span>
+                        <span class="field__error">{{ fieldError('name') ? lang.t().contact.nameRequired : '' }}</span>
                     </div>
 
                     <div class="field">
-                        <label class="field__label" for="email">Your Email</label>
+                        <label class="field__label" for="email">{{ lang.t().contact.emailLabel }}</label>
                         <input id="email" type="email" formControlName="email" autocomplete="email"
                             [class.field__input--error]="fieldError('email')" />
                         <span class="field__error">
-                            {{ fieldError('email') ? (form.get('email')?.hasError('required') ? 'Email is required.' : 'Please enter a valid email.') : '' }}
+                            {{ fieldError('email') ? (form.get('email')?.hasError('required') ? lang.t().contact.emailRequired : lang.t().contact.emailInvalid) : '' }}
                         </span>
                     </div>
                 </div>
 
                 <div class="field field--message">
-                    <label class="field__label" for="message">Your Message</label>
+                    <label class="field__label" for="message">{{ lang.t().contact.messageLabel }}</label>
                     <textarea id="message" rows="6" formControlName="message"
                         [class.field__input--error]="fieldError('message')"></textarea>
-                    <span class="field__error">{{ fieldError('message') ? 'Message is required.' : '' }}</span>
+                    <span class="field__error">{{ fieldError('message') ? lang.t().contact.messageRequired : '' }}</span>
                 </div>
 
                 <div class="contact__bottom">
@@ -62,13 +58,13 @@
                         <img class="privacy__icon" [src]="getCheckboxIcon()"
                             (mouseenter)="hovering = true" (mouseleave)="hovering = false" alt="Checkbox" />
                         <span class="privacy__text">
-                            I've read the
-                            <a routerLink="/privacy-policy" class="privacy__link">privacy policy</a>
-                            and agree to the processing of my data as outlined.
+                            {{ lang.t().contact.privacyBefore }}
+                            <a routerLink="/privacy-policy" class="privacy__link">{{ lang.t().contact.privacyLink }}</a>
+                            {{ lang.t().contact.privacyAfter }}
                         </span>
                     </label>
 
-                    <button class="send" type="submit" [disabled]="!canSubmit">Send</button>
+                    <button class="send" type="submit" [disabled]="!canSubmit">{{ lang.t().contact.send }}</button>
                 </div>
 
             </form>
@@ -76,13 +72,13 @@
         </ng-container>
 
         <div class="contact__feedback contact__feedback--success" *ngIf="submitState === 'success'">
-            <p>Your message has been sent successfully. I'll get back to you soon!</p>
-            <button class="send" type="button" (click)="resetForm()">Send another message</button>
+            <p>{{ lang.t().contact.successMsg }}</p>
+            <button class="send" type="button" (click)="resetForm()">{{ lang.t().contact.anotherMsg }}</button>
         </div>
 
         <div class="contact__feedback contact__feedback--error" *ngIf="submitState === 'error'">
-            <p>Something went wrong. Please try again or reach out via email directly.</p>
-            <button class="send" type="button" (click)="resetForm()">Try again</button>
+            <p>{{ lang.t().contact.errorMsg }}</p>
+            <button class="send" type="button" (click)="resetForm()">{{ lang.t().contact.tryAgain }}</button>
         </div>
 
     </div>

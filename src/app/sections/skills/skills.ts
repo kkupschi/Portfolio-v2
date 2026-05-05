@@ -1,8 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-skills',
+  standalone: true,
   templateUrl: './skills.html',
-  styleUrls: ['./skills.scss']
+  styleUrls: ['./skills.scss'],
 })
-export class SkillsComponent {}
+export class SkillsComponent {
+  lang = inject(LanguageService);
+}

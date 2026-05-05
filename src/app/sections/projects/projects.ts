@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 
 type TabKey = 'bookstore' | 'pokedex' | 'join' | 'ongoing';
 
@@ -8,10 +9,10 @@ type TabKey = 'bookstore' | 'pokedex' | 'join' | 'ongoing';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './projects.html',
-  styleUrls: ['./projects.scss']
+  styleUrls: ['./projects.scss'],
 })
-  
 export class ProjectsComponent {
+  lang = inject(LanguageService);
   activeTab: TabKey = 'bookstore';
 
   select(tab: TabKey): void {
