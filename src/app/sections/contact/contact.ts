@@ -1,61 +1,60 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, RouterModule],
   templateUrl: './contact.html',
-  styleUrls: ['./contact.scss']
+  styleUrls: ['./contact.scss'],
 })
 export class ContactComponent {
-  name = '';
-  email = '';
-  message = '';
+  form = new FormGroup({
+    name: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    message: new FormControl('', Validators.required),
+  });
+
   privacyAccepted = false;
-
   hovering = false;
-  showError = false;
+  privacyTouched = false;
+  submitState: 'idle' | 'success' | 'error' = 'idle';
 
-  getCheckboxIcon(): string {
-
-    if (this.showError) {
-      return '/assets/ui/checkbox-error.png';
-    }
-
-    if (this.privacyAccepted) {
-      return '/assets/ui/checkbox-checked.png';
-    }
-
-    if (this.hovering) {
-      return '/assets/ui/checkbox-hover.png';
-    }
-
-    return '/assets/ui/checkbox-default.png'; // <-- HIER angepasst
+  get canSubmit(): boolean {
+    return this.form.valid && this.privacyAccepted;
   }
 
-  clearError() {
-    this.showError = false;
+  getCheckboxIcon(): string {
+    if (this.privacyTouched && !this.privacyAccepted) return '/assets/ui/checkbox-error.png';
+    if (this.privacyAccepted) return '/assets/ui/checkbox-checked.png';
+    if (this.hovering) return '/assets/ui/checkbox-hover.png';
+    return '/assets/ui/checkbox-default.png';
+  }
+
+  onPrivacyChange() {
+    this.privacyTouched = true;
+  }
+
+  fieldError(name: string): boolean {
+    const ctrl = this.form.get(name);
+    return !!(ctrl && ctrl.invalid && ctrl.touched);
   }
 
   submit() {
-    if (!this.privacyAccepted) {
-      this.showError = true;
-      return;
-    }
+    this.form.markAllAsTouched();
+    this.privacyTouched = true;
 
-    console.log('Submit:', {
-      name: this.name,
-      email: this.email,
-      message: this.message
-    });
+    if (!this.canSubmit) return;
 
-    // Reset
-    this.name = '';
-    this.email = '';
-    this.message = '';
+    this.submitState = 'success';
+    this.form.reset();
     this.privacyAccepted = false;
-    this.showError = false;
+    this.privacyTouched = false;
+  }
+
+  resetForm() {
+    this.submitState = 'idle';
   }
 }
