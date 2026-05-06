@@ -65,18 +65,7 @@
 }
 
 @media (max-width: 600px) {
-    .navbar__inner {
-        height: 80px;
-        grid-template-columns: 1fr auto;
-        padding: 0 24px;
-    }
-
-    .navbar__links {
+    .navbar {
         display: none;
-    }
-
-    .navbar__lang button {
-        padding: 6px 10px;
-        font-size: 13px;
     }
 }
