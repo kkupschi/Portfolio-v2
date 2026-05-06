@@ -16,6 +16,7 @@ export interface Translations {
     successMsg: string; anotherMsg: string; errorMsg: string; tryAgain: string;
     nameRequired: string; emailRequired: string; emailInvalid: string; messageRequired: string;
   };
+  footer: { imprint: string; privacyPolicy: string; legalNotice: string; copy: string };
 }
 
 export const translations: Record<Lang, Translations> = {
@@ -73,6 +74,12 @@ export const translations: Record<Lang, Translations> = {
       emailInvalid: 'Please enter a valid email.',
       messageRequired: 'Message is required.',
     },
+    footer: {
+      imprint: 'Imprint',
+      privacyPolicy: 'Privacy Policy',
+      legalNotice: 'Legal Notice',
+      copy: '© Kristian Kupsch 2026',
+    },
   },
   de: {
     nav: {
@@ -127,6 +134,12 @@ export const translations: Record<Lang, Translations> = {
       emailRequired: 'E-Mail ist erforderlich.',
       emailInvalid: 'Bitte gib eine gültige E-Mail-Adresse ein.',
       messageRequired: 'Nachricht ist erforderlich.',
+    },
+    footer: {
+      imprint: 'Impressum',
+      privacyPolicy: 'Datenschutz',
+      legalNotice: 'Rechtliches',
+      copy: '© Kristian Kupsch 2026',
     },
   },
 };
