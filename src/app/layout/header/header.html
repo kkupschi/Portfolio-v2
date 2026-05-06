@@ -1,17 +1,32 @@
-<section class="top" id="home">
-    <button class="top__hamburger" aria-label="Menu">
+<section class="top" [class.menu-open]="menuOpen" id="home">
+
+    <img class="top__logo-mobile" src="/assets/ui/logo.png" alt="Logo" />
+
+    <button class="top__hamburger" (click)="toggleMenu()" aria-label="Menu">
         <span></span>
         <span></span>
         <span></span>
     </button>
+
     <div class="container top__inner">
 
         <div class="top__photo">
             <img class="top__circle" src="/assets/ui/circle-bg.png" alt="" />
             <img class="top__profile" src="/assets/images/profile1.png" alt="Kristian Kupsch" />
+
+            <nav class="top__mobile-nav" [class.is-open]="menuOpen">
+                <a href="#why" (click)="menuOpen = false">{{ lang.t().nav.whyMe }}</a>
+                <a href="#skills" (click)="menuOpen = false">{{ lang.t().nav.skills }}</a>
+                <a href="#projects" (click)="menuOpen = false">{{ lang.t().nav.projects }}</a>
+                <a href="#contact" (click)="menuOpen = false">{{ lang.t().nav.contact }}</a>
+                <div class="top__mobile-lang">
+                    <button type="button" [class.active]="lang.lang() === 'de'" (click)="lang.set('de')">DE</button>
+                    <button type="button" [class.active]="lang.lang() === 'en'" (click)="lang.set('en')">EN</button>
+                </div>
+            </nav>
         </div>
 
-        <div class="top__title">
+        <div class="top__title" [class.title-hidden]="menuOpen">
             <img class="top__logo" src="/assets/ui/logo.png" alt="Logo" />
 
             <h1>Kristian Kupsch</h1>

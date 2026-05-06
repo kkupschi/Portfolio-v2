@@ -9,4 +9,9 @@ import { LanguageService } from '../../services/language.service';
 })
 export class HeaderComponent {
   lang = inject(LanguageService);
+  menuOpen = false;
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
 }
