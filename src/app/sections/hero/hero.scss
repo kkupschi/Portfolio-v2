@@ -47,3 +47,36 @@
 .navbar__lang .active {
     color: white;
 }
+
+@media (max-width: 1100px) {
+    .navbar__inner {
+        grid-template-columns: auto 1fr auto;
+        padding: 0 24px;
+    }
+
+    .navbar__logo {
+        margin-left: 0;
+    }
+
+    .navbar__links {
+        gap: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar__inner {
+        height: 80px;
+        grid-template-columns: 1fr auto;
+        padding: 0 24px;
+    }
+
+    .navbar__links {
+        display: none;
+    }
+
+    .navbar__lang button {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+}

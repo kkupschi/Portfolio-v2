@@ -1,6 +1,24 @@
 export type Lang = 'de' | 'en';
 
-export const translations = {
+export interface Translations {
+  nav: { whyMe: string; skills: string; projects: string; contact: string };
+  hero: { subtitle: string };
+  whyMe: { title: string; locationPrefix: string; city: string; heading: string; text: string };
+  skills: { title: string; learningTitle: string; learningText: string };
+  testimonials: { headline: string; linkedIn: string };
+  projects: {
+    title: string; technologies: string; liveTest: string; durationLabel: string;
+    aboutProject: string; workProcess: string; groupWork: string;
+  };
+  contact: {
+    title: string; text: string; nameLabel: string; emailLabel: string; messageLabel: string;
+    privacyBefore: string; privacyLink: string; privacyAfter: string; send: string;
+    successMsg: string; anotherMsg: string; errorMsg: string; tryAgain: string;
+    nameRequired: string; emailRequired: string; emailInvalid: string; messageRequired: string;
+  };
+}
+
+export const translations: Record<Lang, Translations> = {
   en: {
     nav: {
       whyMe: 'Why me',
@@ -111,6 +129,4 @@ export const translations = {
       messageRequired: 'Nachricht ist erforderlich.',
     },
   },
-} as const;
-
-export type Translations = typeof translations.en;
+};

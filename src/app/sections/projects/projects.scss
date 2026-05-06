@@ -72,6 +72,54 @@
     .projects__content {
         grid-template-columns: 1fr;
     }
+
+    .projects__tabs {
+        gap: 20px;
+        padding: 16px 20px 0;
+        flex-wrap: wrap;
+    }
+
+    .projects__tab {
+        font-size: 22px;
+    }
+
+    .projects__panel {
+        padding: 24px 24px;
+    }
+
+    .projects__image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 11;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects {
+        padding: 40px 0 100px;
+    }
+
+    .projects__tab {
+        font-size: 17px;
+        padding: 12px 8px;
+    }
+
+    .projects__tab.is-active {
+        font-size: 17px;
+        padding: 14px 16px;
+    }
+
+    .projects__block h3 {
+        font-size: 22px;
+    }
+
+    .projects__block p {
+        font-size: 16px;
+    }
+
+    .projects__buttons {
+        flex-wrap: wrap;
+    }
 }
 
 .projects__left {

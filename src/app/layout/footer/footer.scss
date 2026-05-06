@@ -80,3 +80,31 @@
     display: block;
     opacity: 0.9;
 }
+
+@media (max-width: 768px) {
+    .footer {
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .footer__inner {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer__left {
+        justify-items: center;
+    }
+
+    .footer__right {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer__left {
+        font-size: 15px;
+    }
+}
