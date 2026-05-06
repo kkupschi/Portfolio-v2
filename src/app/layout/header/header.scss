@@ -19,7 +19,6 @@
     color: white;
 }
 
-/* LEFT IMAGE */
 .top__photo {
     position: relative;
     width: 520px;
@@ -52,7 +51,6 @@
     transition: opacity 0.25s ease;
 }
 
-/* TITLE */
 .top__title {
     position: relative;
     transition: opacity 0.25s ease;
@@ -79,7 +77,6 @@ h1 {
     font-weight: 400;
 }
 
-/* DOWN ARROW */
 .top__down {
     display: inline-block;
     margin-top: 70px;
@@ -90,7 +87,6 @@ h1 {
     width: 38px;
 }
 
-/* SOCIAL ICONS */
 .top__icons {
     display: flex;
     flex-direction: column;
@@ -117,7 +113,6 @@ h1 {
     opacity: 0.9;
 }
 
-/* Mobile-only elements hidden on desktop */
 .top__hamburger {
     display: none;
 }
@@ -136,10 +131,12 @@ h1 {
         height: auto;
         min-height: calc(100vh - 104px);
         padding-bottom: 0;
+        overflow: hidden;
     }
 
     .top__inner {
-        grid-template-columns: 1fr 80px;
+        position: relative;
+        grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         height: auto;
         align-items: center;
@@ -149,18 +146,24 @@ h1 {
     .top__title {
         grid-column: 1;
         grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .top__icons {
-        grid-column: 2;
-        grid-row: 1;
+        position: absolute;
+        right: 0;
+        top: 40px;
         flex-direction: column;
         align-self: center;
         align-items: center;
+        gap: 16px;
     }
 
     .top__photo {
-        grid-column: 1 / -1;
+        grid-column: 1;
         grid-row: 2;
         width: 340px;
         height: 420px;
@@ -196,6 +199,8 @@ h1 {
 
     .top__down {
         margin-left: 0;
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -207,7 +212,6 @@ h1 {
         overflow: hidden;
     }
 
-    /* Logo top-left */
     .top__logo-mobile {
         display: block;
         position: absolute;
@@ -217,12 +221,10 @@ h1 {
         z-index: 10;
     }
 
-    /* Hide the logo inside .top__title on mobile (logo-mobile takes over) */
     .top__logo {
         display: none;
     }
 
-    /* Hamburger top-right */
     .top__hamburger {
         display: flex;
         flex-direction: column;
@@ -246,7 +248,6 @@ h1 {
         transition: transform 0.25s ease, opacity 0.25s ease;
     }
 
-    /* Grid layout */
     .top__inner {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
@@ -314,7 +315,6 @@ h1 {
         display: none;
     }
 
-    /* Mobile nav inside the bubble */
     .top__mobile-nav {
         display: flex;
         flex-direction: column;
@@ -369,7 +369,6 @@ h1 {
         background: rgba(31, 38, 43, 0.15);
     }
 
-    /* Menu open: photo fades, title hides, bubble expands */
     .top.menu-open .top__profile {
         opacity: 0;
     }
@@ -384,7 +383,6 @@ h1 {
         height: 500px;
     }
 
-    /* Hamburger → X */
     .top.menu-open .top__hamburger span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 6px);
     }

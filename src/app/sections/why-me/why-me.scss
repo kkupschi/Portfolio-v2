@@ -26,7 +26,6 @@
     gap: 80px;
 }
 
-/* Left */
 .why__location {
     display: flex;
     align-items: center;
@@ -52,7 +51,6 @@
     color: rgba(137, 188, 217, 1);
 }
 
-/* Right */
 .why__text h3 {
     font-size: 18px;
     font-weight: 600;
@@ -74,7 +72,6 @@
 
 .why__cta img {
     width: 160px;
-    /* kannst du ans Figma angleichen */
     height: auto;
     display: block;
 }
@@ -92,6 +89,21 @@
     .why__content {
         grid-template-columns: 1fr;
         gap: 50px;
+    }
+
+    .why__text {
+        text-align: center;
+    }
+
+    .why__text p {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .why__cta {
+        display: flex;
+        justify-content: center;
     }
 }
 
