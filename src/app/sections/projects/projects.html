@@ -12,11 +12,7 @@
             <button class="projects__tab" [class.is-active]="activeTab === 'join'" (click)="select('join')">
                 <span class="projects__tab-num">3.</span> Join
             </button>
-            <button class="projects__tab" [class.is-active]="activeTab === 'ongoing'" (click)="select('ongoing')">
-                <span class="projects__tab-num">4.</span> Ongoing Project
-            </button>
         </div>
-
         <div class="projects__panel">
             <div class="projects__content">
 
@@ -27,7 +23,8 @@
                             <div class="projects__block-text">
                                 <div class="projects__block-head">
                                     <h3>{{ lang.t().projects.aboutProject }}</h3>
-                                    <span class="projects__duration">{{ lang.t().projects.durationLabel }} 3 weeks</span>
+                                    <span class="projects__duration">{{ lang.t().projects.durationLabel }} 1 {{
+                                        lang.t().projects.weeks }}</span>
                                 </div>
                                 <p>
                                     This App is a Slack Clone App.<br />
@@ -47,16 +44,6 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="projects__block">
-                            <div class="projects__dot"></div>
-                            <div class="projects__block-text">
-                                <h3>{{ lang.t().projects.groupWork }}</h3>
-                                <p>
-                                    How many people were in the team and what was your role? Describe your
-                                    tasks in 1-2 sentences. What technologies did you use?
-                                </p>
-                            </div>
-                        </div>
                     </div>
                     <div class="projects__right">
                         <div class="projects__tech">
@@ -71,8 +58,8 @@
                             <img src="/assets/project/bookstore.png" alt="Bookstore" />
                         </div>
                         <div class="projects__buttons">
-                            <a class="btn btn--filled" href="#" target="_blank" rel="noopener noreferrer">{{ lang.t().projects.liveTest }}</a>
-                            <a class="btn btn--outline" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a class="btn btn--outline" href="https://github.com/kkupschi/BookStore" target="_blank"
+                                rel="noopener noreferrer">GitHub</a>
                         </div>
                     </div>
                 </ng-container>
@@ -84,7 +71,8 @@
                             <div class="projects__block-text">
                                 <div class="projects__block-head">
                                     <h3>{{ lang.t().projects.aboutProject }}</h3>
-                                    <span class="projects__duration">{{ lang.t().projects.durationLabel }} 3 weeks</span>
+                                    <span class="projects__duration">{{ lang.t().projects.durationLabel }} 2 {{
+                                        lang.t().projects.weeks }}</span>
                                 </div>
                                 <p>...</p>
                             </div>
@@ -93,13 +81,6 @@
                             <div class="projects__dot"></div>
                             <div class="projects__block-text">
                                 <h3>{{ lang.t().projects.workProcess }}</h3>
-                                <p>...</p>
-                            </div>
-                        </div>
-                        <div class="projects__block">
-                            <div class="projects__dot"></div>
-                            <div class="projects__block-text">
-                                <h3>{{ lang.t().projects.groupWork }}</h3>
                                 <p>...</p>
                             </div>
                         </div>
@@ -118,8 +99,8 @@
                             <img src="/assets/project/pokedex.png" alt="Pokedex" />
                         </div>
                         <div class="projects__buttons">
-                            <a class="btn btn--filled" href="#" target="_blank" rel="noopener noreferrer">{{ lang.t().projects.liveTest }}</a>
-                            <a class="btn btn--outline" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a class="btn btn--outline" href="https://github.com/kkupschi/PokeDex" target="_blank"
+                                rel="noopener noreferrer">GitHub</a>
                         </div>
                     </div>
                 </ng-container>
@@ -131,7 +112,8 @@
                             <div class="projects__block-text">
                                 <div class="projects__block-head">
                                     <h3>{{ lang.t().projects.aboutProject }}</h3>
-                                    <span class="projects__duration">{{ lang.t().projects.durationLabel }} 3 weeks</span>
+                                    <span class="projects__duration">{{ lang.t().projects.durationLabel }} 3 {{
+                                        lang.t().projects.weeks }}</span>
                                 </div>
                                 <p>...</p>
                             </div>
@@ -155,65 +137,25 @@
                         <div class="projects__tech">
                             <p class="projects__tech-title">{{ lang.t().projects.technologies }}</p>
                             <div class="projects__tech-icons">
-                                <img src="icons/angular.png" alt="Angular" />
+                                <img src="icons/html5.png" alt="HTML" />
                                 <img src="icons/css.png" alt="CSS" />
+                                <img src="icons/angular.png" alt="Angular" />
+                                <img src="icons/javascript.png" alt="JavaScript" />
                             </div>
                         </div>
                         <div class="projects__image">
                             <img src="/assets/project/join.png" alt="Join" />
                         </div>
                         <div class="projects__buttons">
-                            <a class="btn btn--filled" href="#" target="_blank" rel="noopener noreferrer">{{ lang.t().projects.liveTest }}</a>
-                            <a class="btn btn--outline" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a class="btn btn--filled"
+                                href="https://join-1-1223.developerakademie.net/angular-projects/join-01/login"
+                                target="_blank" rel="noopener noreferrer">{{
+                                lang.t().projects.liveTest }}</a>
+                            <a class="btn btn--outline" href="https://github.com/kkupschi/join" target="_blank"
+                                rel="noopener noreferrer">GitHub</a>
                         </div>
                     </div>
                 </ng-container>
-
-                <ng-container *ngIf="activeTab === 'ongoing'">
-                    <div class="projects__left">
-                        <div class="projects__block">
-                            <div class="projects__dot"></div>
-                            <div class="projects__block-text">
-                                <div class="projects__block-head">
-                                    <h3>{{ lang.t().projects.aboutProject }}</h3>
-                                    <span class="projects__duration">{{ lang.t().projects.durationLabel }} in progress</span>
-                                </div>
-                                <p>...</p>
-                            </div>
-                        </div>
-                        <div class="projects__block">
-                            <div class="projects__dot"></div>
-                            <div class="projects__block-text">
-                                <h3>{{ lang.t().projects.workProcess }}</h3>
-                                <p>...</p>
-                            </div>
-                        </div>
-                        <div class="projects__block">
-                            <div class="projects__dot"></div>
-                            <div class="projects__block-text">
-                                <h3>{{ lang.t().projects.groupWork }}</h3>
-                                <p>...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="projects__right">
-                        <div class="projects__tech">
-                            <p class="projects__tech-title">{{ lang.t().projects.technologies }}</p>
-                            <div class="projects__tech-icons">
-                                <img src="icons/angular.png" alt="Angular" />
-                                <img src="icons/typescript.png" alt="TypeScript" />
-                            </div>
-                        </div>
-                        <div class="projects__image">
-                            <img src="/assets/project/ongoing.png" alt="Ongoing Project" />
-                        </div>
-                        <div class="projects__buttons">
-                            <a class="btn btn--filled" href="#" target="_blank" rel="noopener noreferrer">{{ lang.t().projects.liveTest }}</a>
-                            <a class="btn btn--outline" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
-                    </div>
-                </ng-container>
-
             </div>
         </div>
     </div>
