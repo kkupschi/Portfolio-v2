@@ -5,7 +5,7 @@ export interface Translations {
   hero: { subtitle: string };
   whyMe: { title: string; locationPrefix: string; city: string; heading: string; text: string };
   skills: { title: string; learningTitle: string; learningText: string };
-  testimonials: { headline: string; linkedIn: string };
+  testimonials: { headline: string; linkedIn: string; dominikQuote: string; kellyQuote: string };
   projects: {
     title: string; technologies: string; liveTest: string; durationLabel: string;
     weeks: string; inProgress: string; ongoingProject: string;
@@ -46,11 +46,13 @@ export const translations: Record<Lang, Translations> = {
     skills: {
       title: 'My Skills',
       learningTitle: 'I am currently learning',
-      learningText: 'Show that you are motivated to continually improve your skills, implement innovative solutions and stay abreast of new technologies.',
+      learningText: 'Staying up to date is part of my mindset as a developer. React and Vue.js are two of the most in-demand frontend frameworks today — and I\'m actively building with both to deepen my understanding of component-based architecture, state management, and modern UI development.',
     },
     testimonials: {
       headline: 'Need a teamplayer? Here what my colleagues said about me',
       linkedIn: 'LinkedIn Profile',
+      dominikQuote: '"Kristian is a very open-minded person when it comes to feedback. His work is structured and precise. Open communication within the team is extremely important to him, and he collaborates closely with his teammates. Working together as a team with him was a real pleasure."',
+      kellyQuote: '"Kris is the kind of teammate you could only wish for. His positive attitude makes a significant contribution to a great team dynamic, and he consistently impresses with his solution-oriented approach. An absolutely reliable partner who gives his all in every phase of a project!"',
     },
     projects: {
       title: 'My Projects',
@@ -66,7 +68,7 @@ export const translations: Record<Lang, Translations> = {
     },
     contact: {
       title: 'Contact me',
-      text: 'Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work. Example: Feel free to get in touch with job offers or opportunities such as: ...',
+      text: "I'm a Frontend Developer focused on creating modern, responsive, and user-friendly web experiences. My goal is not only to turn designs into code, but to build fast, interactive, and high-quality applications that bring real value to users and projects.\n\nI'm especially interested in opportunities related to Frontend Development, UI-focused applications, and modern web technologies. Whether it's a startup, agency, or established company, I'm always excited to work on projects where I can contribute creative ideas, clean code, and thoughtful solutions.\n\nIf you're looking for someone to help build modern websites, web applications, or engaging user interfaces, feel free to get in touch.",
       nameLabel: 'Your name',
       emailLabel: 'Your Email',
       messageLabel: 'Your Message',
@@ -127,11 +129,13 @@ export const translations: Record<Lang, Translations> = {
     skills: {
       title: 'Meine Kenntnisse',
       learningTitle: 'Ich lerne gerade',
-      learningText: 'Zeige, dass du motiviert bist, deine Fähigkeiten kontinuierlich weiterzuentwickeln, innovative Lösungen umzusetzen und stets auf dem neuesten Stand der Technologie zu bleiben.',
+      learningText: 'Auf dem Laufenden zu bleiben ist für mich als Entwickler selbstverständlich. React und Vue.js gehören heute zu den gefragtesten Frontend-Frameworks — und ich arbeite aktiv mit beiden, um mein Verständnis von komponentenbasierter Architektur, State Management und moderner UI-Entwicklung zu vertiefen.',
     },
     testimonials: {
       headline: 'Auf der Suche nach einem Teamplayer? Das sagen meine Kollegen über mich',
       linkedIn: 'LinkedIn-Profil',
+      dominikQuote: '„Kristian ist ein sehr offener Mensch für Kritik. Seine Arbeit ist strukturiert und präzise. Ihm ist eine offene Kommunikation im Team äußerst wichtig und arbeitet eng mit seinen Teamkollegen zusammen. Die Teamarbeit mit Ihm hat mir viel Freude bereitet."',
+      kellyQuote: '„Kris ist ein Teamkollege, wie man ihn sich nur wünschen kann. Mit seiner positiven Art trägt er maßgeblich zu einer tollen Teamdynamik bei und überzeugt dabei durch seine lösungsorientierte Arbeitsweise. Ein absolut zuverlässiger Partner, der in jeder Projektphase mit vollem Einsatz dabei ist!"',
     },
     projects: {
       title: 'Meine Projekte',
@@ -147,7 +151,7 @@ export const translations: Record<Lang, Translations> = {
     },
     contact: {
       title: 'Kontaktiere mich',
-      text: 'Ermutige Menschen, dich zu kontaktieren, und beschreibe, welche Rolle dich interessiert. Zeige, dass du mit deiner Arbeit einen Mehrwert für ihre Projekte schaffst.\n\nBeispiel: Melde dich gerne mit Jobangeboten oder Möglichkeiten wie: ...',
+      text: 'Ich bin ein Frontend Developer mit dem Fokus auf moderne, responsive und benutzerfreundliche Web-Erlebnisse. Mein Ziel ist es, nicht nur Designs in Code umzusetzen, sondern schnelle, interaktive und hochwertige Anwendungen zu entwickeln, die echten Mehrwert für Nutzer und Projekte schaffen.\n\nBesonders interessiere ich mich für Möglichkeiten im Bereich Frontend Development, UI-fokussierte Anwendungen und moderne Webtechnologien. Ob Startup, Agentur oder etabliertes Unternehmen — ich freue mich immer darauf, an Projekten mitzuwirken, bei denen ich kreative Ideen, sauberen Code und durchdachte Lösungen einbringen kann.\n\nWenn du jemanden suchst, der moderne Websites, Webanwendungen oder ansprechende Benutzeroberflächen mitentwickelt — melde dich gerne.',
       nameLabel: 'Dein Name',
       emailLabel: 'Deine E-Mail',
       messageLabel: 'Deine Nachricht',
