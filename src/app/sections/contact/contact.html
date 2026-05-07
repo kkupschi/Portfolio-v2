@@ -3,7 +3,7 @@
 
         <h2 class="section-title contact__headline">{{ lang.t().contact.title }}</h2>
 
-        <ng-container *ngIf="submitState === 'idle'">
+        @if (submitState === 'idle') {
 
             <div class="contact__top">
                 <p class="contact__text">{{ lang.t().contact.text }}</p>
@@ -69,17 +69,21 @@
 
             </form>
 
-        </ng-container>
+        }
 
-        <div class="contact__feedback contact__feedback--success" *ngIf="submitState === 'success'">
-            <p>{{ lang.t().contact.successMsg }}</p>
-            <button class="send" type="button" (click)="resetForm()">{{ lang.t().contact.anotherMsg }}</button>
-        </div>
+        @if (submitState === 'success') {
+            <div class="contact__feedback contact__feedback--success">
+                <p>{{ lang.t().contact.successMsg }}</p>
+                <button class="send" type="button" (click)="resetForm()">{{ lang.t().contact.anotherMsg }}</button>
+            </div>
+        }
 
-        <div class="contact__feedback contact__feedback--error" *ngIf="submitState === 'error'">
-            <p>{{ lang.t().contact.errorMsg }}</p>
-            <button class="send" type="button" (click)="resetForm()">{{ lang.t().contact.tryAgain }}</button>
-        </div>
+        @if (submitState === 'error') {
+            <div class="contact__feedback contact__feedback--error">
+                <p>{{ lang.t().contact.errorMsg }}</p>
+                <button class="send" type="button" (click)="resetForm()">{{ lang.t().contact.tryAgain }}</button>
+            </div>
+        }
 
     </div>
 </section>

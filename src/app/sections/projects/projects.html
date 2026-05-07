@@ -16,7 +16,7 @@
         <div class="projects__panel">
             <div class="projects__content">
 
-                <ng-container *ngIf="activeTab === 'bookstore'">
+                @if (activeTab === 'bookstore') {
                     <div class="projects__left">
                         <div class="projects__block">
                             <div class="projects__dot"></div>
@@ -62,9 +62,9 @@
                                 rel="noopener noreferrer">GitHub</a>
                         </div>
                     </div>
-                </ng-container>
+                }
 
-                <ng-container *ngIf="activeTab === 'pokedex'">
+                @if (activeTab === 'pokedex') {
                     <div class="projects__left">
                         <div class="projects__block">
                             <div class="projects__dot"></div>
@@ -74,14 +74,14 @@
                                     <span class="projects__duration">{{ lang.t().projects.durationLabel }} 2 {{
                                         lang.t().projects.weeks }}</span>
                                 </div>
-                                <p>...</p>
+                                <p>{{ lang.t().projectContent.pokedex.about }}</p>
                             </div>
                         </div>
                         <div class="projects__block">
                             <div class="projects__dot"></div>
                             <div class="projects__block-text">
                                 <h3>{{ lang.t().projects.workProcess }}</h3>
-                                <p>...</p>
+                                <p>{{ lang.t().projectContent.pokedex.work }}</p>
                             </div>
                         </div>
                     </div>
@@ -103,9 +103,9 @@
                                 rel="noopener noreferrer">GitHub</a>
                         </div>
                     </div>
-                </ng-container>
+                }
 
-                <ng-container *ngIf="activeTab === 'join'">
+                @if (activeTab === 'join') {
                     <div class="projects__left">
                         <div class="projects__block">
                             <div class="projects__dot"></div>
@@ -115,21 +115,21 @@
                                     <span class="projects__duration">{{ lang.t().projects.durationLabel }} 3 {{
                                         lang.t().projects.weeks }}</span>
                                 </div>
-                                <p>...</p>
+                                <p>{{ lang.t().projectContent.join.about }}</p>
                             </div>
                         </div>
                         <div class="projects__block">
                             <div class="projects__dot"></div>
                             <div class="projects__block-text">
                                 <h3>{{ lang.t().projects.workProcess }}</h3>
-                                <p>...</p>
+                                <p>{{ lang.t().projectContent.join.work }}</p>
                             </div>
                         </div>
                         <div class="projects__block">
                             <div class="projects__dot"></div>
                             <div class="projects__block-text">
                                 <h3>{{ lang.t().projects.groupWork }}</h3>
-                                <p>...</p>
+                                <p>{{ lang.t().projectContent.join.group }}</p>
                             </div>
                         </div>
                     </div>
@@ -155,7 +155,7 @@
                                 rel="noopener noreferrer">GitHub</a>
                         </div>
                     </div>
-                </ng-container>
+                }
             </div>
         </div>
     </div>

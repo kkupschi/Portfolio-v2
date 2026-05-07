@@ -68,7 +68,7 @@ export const translations: Record<Lang, Translations> = {
     },
     contact: {
       title: 'Contact me',
-      text: "I'm a Frontend Developer focused on creating modern, responsive, and user-friendly web experiences. My goal is not only to turn designs into code, but to build fast, interactive, and high-quality applications that bring real value to users and projects.\n\nI'm especially interested in opportunities related to Frontend Development, UI-focused applications, and modern web technologies. Whether it's a startup, agency, or established company, I'm always excited to work on projects where I can contribute creative ideas, clean code, and thoughtful solutions.\n\nIf you're looking for someone to help build modern websites, web applications, or engaging user interfaces, feel free to get in touch.",
+      text: "I'm a Frontend Developer focused on building modern, responsive, and user-friendly web experiences. I'm interested in opportunities in Frontend Development and UI-focused applications. If you're looking for someone to help build modern websites or web applications, feel free to get in touch.",
       nameLabel: 'Your name',
       emailLabel: 'Your Email',
       messageLabel: 'Your Message',
@@ -92,14 +92,14 @@ export const translations: Record<Lang, Translations> = {
         group: '...',
       },
       pokedex: {
-        about: '...',
-        work: '...',
+        about: 'Browse all Pokémon from Generation 1 to 9 in one place. A complete Pokédex built with a public API.',
+        work: 'I started by exploring the API and understanding what data was available. From there, I focused on designing cards that felt fresh and modern — not too plain, but clean and well-structured.',
         group: '...',
       },
       join: {
-        about: '...',
-        work: '...',
-        group: '...',
+        about: 'A Kanban project designed like a real work planning tool, with tasks, a to-do list, and a priority-based process to keep everything organised.',
+        work: 'We planned the entire project as a group in Trello and divided the work clearly so everyone had a defined focus without overlapping.',
+        group: 'I really enjoyed the group experience. The workload was split simply and fairly, smooth collaboration from start to finish.',
       },
     },
     footer: {
@@ -151,7 +151,7 @@ export const translations: Record<Lang, Translations> = {
     },
     contact: {
       title: 'Kontaktiere mich',
-      text: 'Ich bin ein Frontend Developer mit dem Fokus auf moderne, responsive und benutzerfreundliche Web-Erlebnisse. Mein Ziel ist es, nicht nur Designs in Code umzusetzen, sondern schnelle, interaktive und hochwertige Anwendungen zu entwickeln, die echten Mehrwert für Nutzer und Projekte schaffen.\n\nBesonders interessiere ich mich für Möglichkeiten im Bereich Frontend Development, UI-fokussierte Anwendungen und moderne Webtechnologien. Ob Startup, Agentur oder etabliertes Unternehmen — ich freue mich immer darauf, an Projekten mitzuwirken, bei denen ich kreative Ideen, sauberen Code und durchdachte Lösungen einbringen kann.\n\nWenn du jemanden suchst, der moderne Websites, Webanwendungen oder ansprechende Benutzeroberflächen mitentwickelt — melde dich gerne.',
+      text: 'Ich bin ein Frontend Developer mit dem Fokus auf moderne, responsive und benutzerfreundliche Web-Erlebnisse. Ich interessiere mich für Möglichkeiten im Bereich Frontend Development und UI-fokussierte Anwendungen. Wenn du jemanden suchst, der moderne Websites oder Webanwendungen mitentwickelt, melde dich gerne.',
       nameLabel: 'Dein Name',
       emailLabel: 'Deine E-Mail',
       messageLabel: 'Deine Nachricht',
@@ -175,14 +175,14 @@ export const translations: Record<Lang, Translations> = {
         group: '...',
       },
       pokedex: {
-        about: '...',
-        work: '...',
+        about: 'Von Generation 1 bis 9 werden alle Pokémon übersichtlich angezeigt. Ein vollständiger Pokédex, der mit einer öffentlichen API gebaut wurde.',
+        work: 'Zunächst habe ich die API analysiert und herausgefunden, was alles nötig ist. Danach habe ich Ideen für das Kartendesign gesammelt — nicht zu simpel, aber modern und übersichtlich gestaltet.',
         group: '...',
       },
       join: {
-        about: '...',
-        work: '...',
-        group: '...',
+        about: 'Das Kanban-Projekt mit Tasks wie eine echte Arbeitsplanung, mit einer To-Do-Liste und einem Priorisierungsprozess, der alles strukturiert hält.',
+        work: 'Wir haben das gesamte Projekt als Gruppe in Trello strukturiert und die Arbeit klar aufgeteilt, sodass jeder einen definierten Bereich hatte ohne sich zu überschneiden.',
+        group: 'Die Erfahrung hab ich sehr genossen. Mit einfacher und fairer Aufteilung für jeden, eine reibungslose Zusammenarbeit von Anfang bis Ende.',
       },
     },
     footer: {
